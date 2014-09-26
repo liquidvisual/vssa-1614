@@ -266,8 +266,8 @@ module.exports = function (grunt) {
       'usemin',
       'pixrem',
       'clean:build',
-      'buildcontrol:master'
-      //'buildcontrol:pages'
+      'buildcontrol:master',
+      'buildcontrol:pages'
   ]);
 
 //-- end module.exports

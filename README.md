@@ -12,7 +12,7 @@ On Mac:
 Note: You may need to install Ruby, Ruby Gems, NodeJS & Git. There are detailed instructions on the [Jekyll](http://jekyllrb.com/docs/installation/) website.
 
     gem install jekyll
-    git clone git@github.com:liquidvisual/swc-0914.git
+    git clone git@github.com:liquidvisual/vssa-1614.git
     cd swc-0914
     npm install
     bower install
