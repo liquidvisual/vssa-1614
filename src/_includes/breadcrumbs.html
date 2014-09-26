@@ -1,0 +1,17 @@
+{% comment %}
+    Note: IGNORE the logic here. This is a bit of a hack to work with Jekyll. BYO logic.
+{% endcomment %}
+
+{% capture parent_section %}
+{{ page.url | replace:'/',' ' | truncatewords: 1 | remove:'...' }}
+{% endcapture %}
+
+{% comment %}
+    Note: Breadcrumbs are DISABLED by default in the config.yml
+{% endcomment %}
+
+{% if page.breadcrumbs == true  %}
+<ul class="breadcrumbs">
+    <li><a href="/{{parent_section}}/"><i class="icon-angle-left"></i>&nbsp; Back to {{ parent_section }}</a></li>
+</ul>
+{% endif %}

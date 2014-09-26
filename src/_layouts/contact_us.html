@@ -1,0 +1,30 @@
+---
+layout: internal
+---
+
+{% assign settings = site.data.settings %}
+
+<!-- MAIN -->
+<div class="medium-8 columns">
+    <main class="main">
+
+        {{ content}}
+
+        <div class="section">
+            <p><strong>Telephone:</strong> <a href="tel:{{ settings.phone }}">{{ settings.phone }}</a></p>
+            <p><strong>Facsimile:</strong> <a href="tel:{{ settings.phone }}">{{ settings.fax }}</a></p>
+            <p><strong>Email Address:</strong> <a href="mailto:{{ settings.email }}">{{ settings.email }}</a></p>
+            <p><strong>Office Address:</strong>  {{ settings.office_address }}</p>
+            <p><strong>Postal Address:</strong> {{ settings.postal_address }}</p>
+            <p><strong>Office Hours:</strong> {{ settings.office_hours }}</p>
+        </div>
+
+        {% include google_map.html %}
+
+    </main> <!-- .main -->
+</div> <!-- .columns -->
+
+<!-- SIDEBAR -->
+<div class="medium-4 columns">
+    {% include sidebar.html %}
+</div>

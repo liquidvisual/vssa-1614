@@ -1,0 +1,69 @@
+---
+layout: master
+---
+
+{% assign hero_image = site.data.settings.homepage_hero_image | prepend: site.assets %}
+{% assign news = site.pages | where: "type", "news_item" %}
+
+<div class="homepage">
+
+	<div class="header-wrapper">
+
+	    <!-- HEADER -->
+	    <header class="header">
+	        {% include header.html %}
+	    </header>
+
+	    <!-- NAVIGATION -->
+	    <nav class="navigation show-for-large-up">
+	        <div class="row collapse outer-row">
+	            <div class="columns">
+	                <div class="topbar">
+	                    {% include navigation.html %}
+	                </div>
+	            </div>
+	        </div>
+	    </nav> <!-- .navigation -->
+
+	</div> <!-- .header-wrapper -->
+
+	<!-- HERO -->
+	<div class="hero" style="background-image: url({{ hero_image }})">
+
+	    <div class="row outer-row">
+	        <div class="medium-6 medium-offset-6 large-5 large-offset-7 columns medium-text-right collapse-left">
+	            <div class="animated fadeInLeft">
+	                <h1>SA Water VACSWIM is a South Australian Government funded program for primary school aged children</h1>
+	                <p><a href="/vacswim-locations/" class="button">
+	                	<i class="icon-child"></i>
+	                	Find your nearest VACSWIM location and book now!
+	                	<i class="icon-angle-right"></i>
+	                	</a>
+	                </p>
+	            </div>
+	        </div> <!-- .columns -->
+	    </div> <!-- .row -->
+
+		<!-- MAIN -->
+		<main class="main">
+			<div class="row outer-row">
+				<div class="medium-6 large-5 columns">
+					<div class="news-module">
+						<h2>Latest News</h2>
+							{% for item in news | limit: 3 %}
+							<article class="news-item">
+								<p><date>{{ item.date | date: "%d %B %Y" }}</date><br>
+								<a href="{{ item.url }}">{{ item.title | strip_html | truncate: 100 }}</a></p>
+							</article>
+							{% endfor %}
+							<p class="text-right"><a class="more-btn" href="/news/">More News &nbsp;<i class="icon-angle-right"></i></a></p>
+					</div> <!-- .news-module -->
+				</div> <!-- .columns -->
+				<div class="medium-6 large-5 large-offset-2 columns show-for-medium-up collapse-left">
+					{% include facebook_widget.html %}
+				</div> <!-- .columns -->
+			</div> <!-- .row -->
+		</main>
+
+	</div> <!-- .hero -->
+</div> <!-- .homepage -->

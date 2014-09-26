@@ -1,0 +1,41 @@
+{% comment %}
+    Note: Navigation data is pulled from /data/navigation.yml
+{% endcomment %}
+
+{% assign navigation = site.data.navigation %}
+
+<ul>
+    {% comment %} Important: leave 'Home' out of the loop {% endcomment %}
+    <li class="{% if page.url == "/" %} active {% endif %}"><a href="/">Home</a></li>
+
+    {% comment %} First Level {% endcomment %}
+    {% for item in navigation | offset: 1 %}
+    <li class="{% if item.url == page.url %} active {% endif %}{% if item.children %} has-dropdown {% endif %}">
+        <a href="{{ item.url }}">{{ item.title }}</a>
+
+        {% comment %} Second Level {% endcomment %}
+        {% if item.children %}
+        <ul class="dropdown">
+            {% for item in item.children %}
+            <li class="{% if item.children %} has-dropdown {% endif %}"><a href="{{ item.url }}">{{ item.title }}</a>
+
+                {% comment %} Third Level {% endcomment %}
+                {% if item.children %}
+                <ul class="dropdown">
+                {% for item in item.children %}
+                    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                {% endfor %}
+                </ul>
+                {% endif %}
+
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </li>
+    {% endfor %}
+
+    {% comment %} Hardcoded Extras {% endcomment %}
+    <li class="right-for-medium"><a href="/login/"><i class="icon-lock"></i>&nbsp; Operator Resources</a></li>
+    <li class="facebook"><a href="{{ site.data.settings.facebook }}"><span><i class="icon-facebook"></i></span></a></li>
+</ul>

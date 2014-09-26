@@ -1,0 +1,10 @@
+# IMPORTANT: Leave off trailing slash for ALL
+
+# baseurl for url paths
+baseurl: ''
+
+# Used on template imgs which may use remote placeholders
+tmp_baseurl: ''
+
+# Used on asset paths
+assets: '/assets'

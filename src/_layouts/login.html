@@ -1,0 +1,59 @@
+---
+layout: internal
+---
+
+<!-- MAIN -->
+<div class="medium-8 columns">
+    <main class="main">
+
+        <div class="section">
+            {{ content }}
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="large-9 columns">
+
+                <form data-abide novalidate method="post" action="/">
+
+                    <!-- ID -->
+                    <div class="row">
+                        <div class="medium-3 columns">
+                            <label for="id" class="medium-text-right inline">ID</label>
+                        </div>
+                        <div class="medium-9 columns">
+                            <input type="text" id="id" name="id" required>
+                            <small class="error">Your ID is required.</small>
+                        </div>
+                    </div> <!-- .row -->
+
+                    <!-- Password -->
+                    <div class="row">
+                        <div class="medium-3 columns">
+                            <label for="password" class="medium-text-right inline">Password</label>
+                        </div>
+                        <div class="medium-9 columns">
+                            <input type="password" id="password" name="password" required>
+                            <small class="error">Your password is required.</small>
+                        </div>
+                    </div> <!-- .row -->
+
+                    <!-- Send Button -->
+                    <div class="row">
+                        <div class="medium-9 medium-offset-3 columns">
+                            <button type="submit" class="button small radius">Login</button>
+                            <div class="right">
+                                <input id="remember-me" type="checkbox" name="remember-me">
+                                <label for="remember-me">Remember me?</label>
+                            </div>
+                        </div>
+                    </div> <!-- .row -->
+
+                </form>
+
+            </div> <!-- .columns -->
+        </div> <!-- .row -->
+
+    </main> <!-- .main -->
+</div> <!-- .columns -->

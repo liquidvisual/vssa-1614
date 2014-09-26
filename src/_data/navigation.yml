@@ -1,0 +1,48 @@
+- title: Home
+  url: /
+
+- title: VACSWIM Locations
+  url: /vacswim-locations/
+
+- title: Program Information
+  url: /program-information/
+  children:
+    - title: Program Fees
+      url: /program-information/program-fees/
+    - title: "Levels/Stages"
+      url: /program-information/levels-stages/
+      children:
+        - title: YMCA Water Safety Course
+          url: /program-information/levels-stages/ymca-water-safety-course/
+    - title: Disabilities
+      url: /program-information/disabilities/
+    - title: "Terms & Conditions"
+      url: /program-information/terms-conditions/
+    - title: Calendar Dates
+      url: /program-information/calendar-dates/
+
+- title: Employment
+  url: /employment/
+
+- title: News
+  url: /news/
+
+- title: Media
+  url: /media/
+  children:
+    - title: Social Media
+      url: /media/social-media/
+
+- title: "About Us"
+  url: "/about-us/"
+  children:
+    - title: Enquire Online
+      url: /about-us/enquire-online/
+    - title: Contact Us
+      url: /about-us/contact-us/
+    - title: Testimonials
+      url: /about-us/testimonials/
+    - title: "Supporters & Sponsors"
+      url: /about-us/supporters-sponsors/
+    - title: Introducing the YMCA
+      url: /about-us/introducing-the-ymca/

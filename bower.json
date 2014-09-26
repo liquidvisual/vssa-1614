@@ -1,0 +1,7 @@
+{
+  "name": "vacswimsa",
+  "version": "0.0.1",
+  "dependencies": {
+    "liquidvisual-foundation": "https://github.com/liquidvisual/liquidvisual-foundation.git"
+  }
+}

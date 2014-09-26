@@ -1,0 +1,24 @@
+{% comment %}
+    IGNORE: Interchange code reference for self:
+    <img width="200" data-interchange="[/ImageGen.ashx?width=200&image=@logo.Url, (default)], [@logo.Url, (retina)]" alt="@logo.Name">
+{% endcomment %}
+
+{% assign logo = site.data.settings.logo  %}
+{% assign affiliate_logo = site.data.settings.affiliate_logo %}
+{% assign affiliate_link = site.data.settings.affiliate_logo %}
+{% assign seo_title = site.data.settings.seo_title  %}
+{% assign company_title = site.data.settings.company %}
+
+<div class="row outer-row">
+    <div class="medium-6 columns">
+        <a class="logo" href="/" title="{{ seo_title }}" itemprop="url">
+        <img src="{{ logo | prepend: site.assets }}" alt="{{ company_title }}" itemprop="logo"></a>
+    </div>
+    <div class="medium-6 columns text-right show-for-large-up">
+        <a class="affiliate-logo" href="/" title="{{ affiliate_logo }}" target="_blank">
+        <img width="72" src="{{ affiliate_logo | prepend: site.baseurl }}" alt="..."></a>
+    </div>
+</div>
+
+<!-- Important: Hamburger outside of row -->
+<a href="#" class="hamburger hide-for-large-up"><span></span></a>

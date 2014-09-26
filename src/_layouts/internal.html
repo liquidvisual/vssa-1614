@@ -1,0 +1,66 @@
+---
+layout: master
+---
+
+{% assign hero_image = page.hero_image | prepend: "/img/template/" | prepend: site.assets %}
+{% assign has_sidebar = page.sidebar_id %}
+{% assign hero_header = page.hero_header_override %}
+
+<div class="internal">
+
+    <!-- HERO TOP -->
+    <div class="hero-top" style="background-image: url({{ hero_image | append: "-top.jpg" }})"></div>
+
+    <div class="header-wrapper">
+
+        <!-- HEADER -->
+        <header class="header">
+            {% include header.html %}
+        </header>
+
+        <!-- NAVIGATION -->
+        <nav class="navigation show-for-large-up">
+            <div class="row collapse outer-row">
+                <div class="columns">
+                    <div class="topbar">
+                        {% include navigation.html %}
+                    </div>
+                </div>
+            </div>
+        </nav> <!-- .navigation -->
+
+    </div> <!-- .header-wrapper -->
+
+    <!-- HERO -->
+    <section class="hero" style="background-image: url({{ hero_image | append: ".jpg" }})">
+        <div class="hero-header">
+            <div class="row outer-row">
+                <div class="columns">
+                    <div class="animated fadeInLeft">
+                        <h1>
+                            {% if hero_header %}{{ hero_header }}{% else %}{{ page.title }}{% endif %}
+                        </h1>
+                    </div>
+                </div> <!-- .columns -->
+            </div> <!-- .row -->
+        </div> <!-- .hero-header -->
+    </section> <!-- .hero -->
+
+    <!-- BREADCRUMBS -->
+    <nav class="breadcrumbs-bar">
+        <div class="row collapse outer-row">
+            <div class="columns">
+                {% include breadcrumbs.html %}
+            </div> <!-- .columns -->
+        </div> <!-- .row -->
+    </nav> <!-- .breadcrumbs-wrapper -->
+
+    <!-- CONTENT -->
+    <div class="row outer-row">
+        {{ content }}
+    </div> <!-- .row -->
+
+    <!-- HERO BOTTOM -->
+    <div class="hero-bottom" style="background-image: url({{ hero_image | append: "-bottom.jpg" }})"></div>
+
+</div> <!-- .internal -->

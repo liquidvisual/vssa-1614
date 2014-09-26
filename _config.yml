@@ -1,0 +1,5 @@
+# Build settings
+markdown: kramdown
+permalink: /blog/:title
+
+# Default Variables

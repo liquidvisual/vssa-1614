@@ -1,0 +1,27 @@
+---
+layout: internal
+---
+
+{% assign settings = site.data.settings  %}
+
+<!-- MAIN -->
+<div class="medium-8 columns">
+    <main class="main">
+
+        <div class="section">
+            {{ content }}
+        </div>
+
+        <div class="row">
+            <div class="medium-11 columns">
+                {% include simple_form.html %}
+            </div>
+        </div>
+
+    </main> <!-- .main -->
+</div> <!-- .columns -->
+
+<!-- SIDEBAR -->
+<div class="medium-4 columns">
+    {% include sidebar.html %}
+</div>
