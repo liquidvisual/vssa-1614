@@ -23,4 +23,4 @@ Enjoy a lifetime of safe recreation on, in and around the water by [enrolling](/
 
 *Statistics sourced from the The Royal Life Saving Society Australia 'National Drowning Report 2010-2011'.
 
-<img width="130" src="/img/content/gov-seal.jpg" alt="Government of South Australia Seal">
+<img width="130" src="{{ "/img/content/gov-seal.jpg" | prepend: site.assets }}" alt="Government of South Australia Seal">

@@ -121,17 +121,26 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 .header .logo {
 	position: relative;
-	top: rem-calc(24);
+	top: rem-calc(20);
 
 	img {
 		width: rem-calc(175);
+
 		@media #{$medium-up} {
+			width: rem-calc(210);
+		}
+
+		@media #{$large-up} {
 			width: rem-calc(268);
 		}
 	}
 
 	@media #{$medium-up} {
-		top: rem-calc(17);
+		top: rem-calc(25);
+	}
+
+	@media #{$large-up} {
+		top: rem-calc(15);
 	}
 }
 
@@ -147,13 +156,17 @@ h1, h2, h3, h4, h5, h6, p, a {
 .hamburger {
 	position: absolute;
 	visibility: hidden;
-	bottom: rem-calc(-5); /* magic num */
+	bottom: rem-calc(0); /* magic num */
 	right: 0;
 	display: block;
 	width: rem-calc(28);
 	height: rem-calc(24);
 	margin: rem-calc(30);
 	z-index: 2;
+
+	@media #{$medium-up} {
+		bottom: rem-calc(4);
+	}
 }
 
 .hamburger:before,
@@ -211,7 +224,8 @@ html.mm-opening .hamburger:after {
 	padding: rem-calc(10 15);
 	margin: rem-calc(10 0);
 	color: white;
-	font-weight: 600;
+	font-weight: 500;
+	font-smoothing: none;
 }
 
 .topbar a:active,
@@ -371,7 +385,7 @@ html.mm-opening .hamburger:after {
 	background-position: 90% top;
 
 	@media #{$medium-up} {
-		background-position: 80% -50px;
+		background-position: 70% -50px;
 	}
 
 	@media #{$large-up} {
@@ -386,12 +400,13 @@ html.mm-opening .hamburger:after {
 }
 
 .homepage .hero h1 {
+	font-size: rem-calc(25);
 	font-weight: 300;
 	color: white;
 	line-height: 1.2;
 	margin-bottom: $vertical-spacing;
 
-	@media #{$medium-up} {
+	@media #{$large-up} {
 		font-size: rem-calc(29);
 	}
 }
@@ -402,11 +417,17 @@ html.mm-opening .hamburger:after {
 	display: block;
 	padding: rem-calc(20 20 65 75);
 	background: rgba($white, 0.8);
-	font-size: rem-calc(22);
+	font-size: rem-calc(18);
 	font-weight: 600;
 	line-height: 1.2;
 	color: #052A32;
 	text-align: right;
+	margin: rem-calc(40 0);
+
+	@media #{$large-up} {
+		font-size: rem-calc(22);
+		margin: rem-calc(20 0);
+	}
 }
 
 .no-touch .homepage .hero .button:hover {
@@ -457,7 +478,7 @@ html.mm-opening .hamburger:after {
 
 	@media #{$large-up} {
 		background: rgba($dark-green, .5);
-		padding: rem-calc(15 0);
+		padding: rem-calc(10 0);
 	}
 }
 
@@ -490,10 +511,11 @@ html.mm-opening .hamburger:after {
 //-----------------------------------------------------------------
 
 .homepage .main {
-	padding-top: rem-calc(20);
+	padding: rem-calc(40 0);
 	background: #0E363C;
 
 	@media #{$large-up} {
+		padding: rem-calc(20 0);
 		background: rgba($dark-green, .8);
 		margin-bottom: rem-calc(45);
 	}
@@ -640,7 +662,7 @@ html.mm-opening .hamburger:after {
 
 .facebook-widget {
 	background: white;
-	margin-bottom: rem-calc(20);
+	// margin-bottom: rem-calc(20);
 
 	.facebook-widget-header {
 		background: #3A5796;
@@ -762,6 +784,10 @@ html.mm-opening .hamburger:after {
 //-----------------------------------------------------------------
 // Special / Misc - Refactor Later
 //-----------------------------------------------------------------
+
+.main a {
+	// text-decoration: underline;
+}
 
 .lv-super label {
 	margin-bottom: 0;
