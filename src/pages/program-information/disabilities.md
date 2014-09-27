@@ -2,9 +2,8 @@
 layout: text_page
 title: Disabilities
 permalink: /program-information/disabilities/
-
-sidebar_id: 2
 hero_image: cpr
+sidebar_id: 2
 ---
 
 ## Everyone Counts

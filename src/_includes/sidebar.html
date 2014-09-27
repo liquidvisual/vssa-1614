@@ -1,34 +1,51 @@
 {% assign navigation = site.data.navigation %}
 {% assign sidebar_id = page.sidebar_id %}
+{% assign sidebar_enroll_cta = page.sidebar_enroll_cta %}
 
 <aside class="sidebar">
     <div class="row">
         <div class="large-10 large-offset-2 columns">
-            <ul class="side-nav no-bullet">
 
-                {% comment %} Top Level {% endcomment %}
-                {% assign top_level = navigation[sidebar_id] %}
-                <li class="{% if top_level.url == page.url %} active {% endif %}">
-                    <a href="{{ top_level.url }}">{{ top_level.title }}</a>
-                </li>
+            {% if sidebar_enroll_cta %}
+                <a href="/vacswim-locations/" class="button expand alert enroll-button"><i class="icon-book"></i> Book / Enrol Online <i class="icon-angle-right"></i></a>
+            {% endif %}
 
-                {% comment %} Second Level {% endcomment %}
-                {% for item in navigation[sidebar_id].children %}
-                <li class="{% if item.url == page.url %} active {% endif %}">
-                    <a href="{{ item.url }}">{{ item.title }}</a>
-                </li>
+            {% comment %} If page specifies advert - display it on top here {% endcomment %}
+            {% if sidebar_advert %}
+                <div class="advertisements section">
+                    {{ sidebar_advert }}
+                </div>
+            {% endif %}
 
-                {% comment %} Third Level {% endcomment %}
-                {% if item.children %}
-                    {% for item in item.children %}
-                    <li class="nested {% if item.url == page.url %} active {% endif %}">
-                        <a href="{{ item.url }}">&nbsp;&nbsp;- {{ item.title }}</a>
+            {% comment %} If SIDEBAR_ID is passed, create second level menu {% endcomment %}
+            {% if sidebar_id %}
+
+                <ul class="side-nav no-bullet">
+                    {% comment %} Top Level {% endcomment %}
+                    {% assign top_level = navigation[sidebar_id] %}
+                    <li class="{% if top_level.url == page.url %} active {% endif %}">
+                        <a href="{{ top_level.url }}">{{ top_level.title }}</a>
                     </li>
-                    {% endfor %}
-                {% endif %}
 
-                {% endfor %}
-            </ul>
+                    {% comment %} Second Level {% endcomment %}
+                    {% for item in navigation[sidebar_id].children %}
+                    <li class="{% if item.url == page.url %} active {% endif %}">
+                        <a href="{{ item.url }}">{{ item.title }}</a>
+                    </li>
+
+                        {% comment %} Third Level {% endcomment %}
+                        {% if item.children %}
+                            {% for item in item.children %}
+                            <li class="nested {% if item.url == page.url %} active {% endif %}">
+                                <a href="{{ item.url }}">&nbsp;&nbsp;- {{ item.title }}</a>
+                            </li>
+                            {% endfor %}
+                        {% endif %}
+
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
         </div>
     </div>
 </aside>

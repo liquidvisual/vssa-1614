@@ -2,9 +2,9 @@
 layout: enquire_online
 title: Enquire Online
 permalink: /about-us/enquire-online/
-
-sidebar_id: 6
 hero_image: kids-carrying-surfboard
+sidebar_id: 6
+sidebar_enroll_cta: true
 ---
 
 ## We're Here to Help

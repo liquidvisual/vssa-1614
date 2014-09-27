@@ -12,6 +12,6 @@
 
 {% if page.breadcrumbs == true  %}
 <ul class="breadcrumbs">
-    <li><a href="/{{parent_section}}/"><i class="icon-angle-left"></i>&nbsp; Back to {{ parent_section }}</a></li>
+    <li><a href="/{{parent_section}}/"><i class="icon-angle-left"></i>&nbsp; Back to {{ parent_section | replace:'-',' ' }}</a></li>
 </ul>
 {% endif %}

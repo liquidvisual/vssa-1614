@@ -2,9 +2,8 @@
 layout: text_page
 title: Terms & Conditions
 permalink: /program-information/terms-conditions/
-
-sidebar_id: 2
 hero_image: cpr
+sidebar_id: 2
 ---
 
 The following information forms an important part of

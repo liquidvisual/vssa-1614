@@ -2,9 +2,8 @@
 layout: text_page
 title: About Us
 permalink: /about-us/
-
-sidebar_id: 6
 hero_image: kids-carrying-surfboard
+sidebar_id: 6
 ---
 
 ## A South Australian water safety icon

@@ -2,9 +2,9 @@
 layout: text_page
 title: Program Fees
 permalink: /program-information/program-fees/
-
-sidebar_id: 2
 hero_image: cpr
+sidebar_id: 2
+sidebar_enroll_cta: true
 ---
 
 ## Program Fees

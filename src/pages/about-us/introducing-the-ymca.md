@@ -2,9 +2,8 @@
 layout: text_page
 title: Introducing the YMCA
 permalink: /about-us/introducing-the-ymca/
-
-sidebar_id: 6
 hero_image: kids-carrying-surfboard
+sidebar_id: 6
 ---
 
 ## Perfect Partnership

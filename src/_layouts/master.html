@@ -22,9 +22,11 @@
     <!-- Google Fonts CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
 
+<!-- <link rel="stylesheet" href="/css/jquery-mmenu-all.css"> -->
+
     <!-- build:css /assets/css/optimized.css -->
     <link rel="stylesheet" href="/vendor/animate.css/animate.min.css">
-    <link rel="stylesheet" href="/css/jquery-mmenu-all.css">
+    <link rel="stylesheet" href="/css/mmenu/jquery-mmenu.css">
     <link rel="stylesheet" href="/css/foundation/foundation.css">
     <link rel="stylesheet" href="/css/foundation-icons.css">
     <link rel="stylesheet" href="/css/icomoon-icons.css">
@@ -68,12 +70,12 @@
     <!-- build:js /assets/scripts/optimized.js -->
     <script src="/vendor/jquery/dist/jquery.min.js"></script>
     <script src="/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="/vendor/jQuery.mmenu/src/js/jquery.mmenu.min.all.js"></script>
     <script src="/vendor/fastclick/lib/fastclick.js"></script>
     <script src="/vendor/nprogress/nprogress.js"></script>
     <script src="/vendor/foundation/js/foundation/foundation.js"></script>
     <script src="/vendor/foundation/js/foundation/foundation.accordion.js"></script>
     <script src="/vendor/foundation/js/foundation/foundation.abide.js"></script>
-    <script src="/scripts/jquery-mmenu-min-all.js"></script>
 
     {% comment %}
         NOTE: These files are only here for future reference. Do not include in markup.
@@ -83,6 +85,7 @@
         <script src="/vendor/WOW/dist/wow.min.js"></script>
         <script src="/scripts/legacy/jquery-1.11.1.min.js"></script>
         <script src="/vendor/fastclick/lib/fastclick.js"></script> <-- this conflicts with animations
+        <script src="/scripts/jquery-mmenu-min-all.js"></script>
 
       ** FOUNDATION 5 **
         <script src="/vendor/bxSlider/jquery.bxslider.min.js"></script>
@@ -106,23 +109,6 @@
 
     <script src="/scripts/main.js"></script>
     <!-- endbuild -->
-
-    <script>
-        $(document).foundation();
-
-        $(function() {
-            $("#off-canvas-menu").mmenu({
-               "offCanvas": {
-                  "position": "right"
-               }
-            });
-
-
-            var touchEvent = $('.touch').length ? 'touchstart' : 'click';
-
-            $(".hamburger").css("visibility", "visible").bind(touchEvent, function() { $("#off-canvas-menu").trigger("open.mm"); });
-         });
-    </script>
 
     <!-- Google Analytics Here -->
 

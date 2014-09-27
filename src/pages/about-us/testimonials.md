@@ -2,9 +2,9 @@
 layout: text_page
 title: Testimonials
 permalink: /about-us/testimonials/
-
-sidebar_id: 6
 hero_image: kids-carrying-surfboard
+sidebar_id: 6
+sidebar_enroll_cta: true
 ---
 
 ##Positive Feedback

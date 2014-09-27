@@ -2,9 +2,8 @@
 layout: calendar_dates
 title: Calendar Dates
 permalink: /program-information/calendar-dates/
-
-sidebar_id: 2
 hero_image: cpr
+sidebar_id: 2
 ---
 
 ## Mark your calendar

@@ -2,9 +2,8 @@
 layout: text_page
 title: Levels / Stages
 permalink: /program-information/levels-stages/
-
-sidebar_id: 2
 hero_image: cpr
+sidebar_id: 2
 ---
 
 ## YMCA AquaSafe Levels

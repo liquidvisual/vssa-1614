@@ -2,7 +2,6 @@
 layout: login
 title: Login
 permalink: /login/
-
 hero_image: "instructors"
 ---
 

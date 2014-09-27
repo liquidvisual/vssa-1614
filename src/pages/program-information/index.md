@@ -2,9 +2,8 @@
 layout: text_page
 title: Program Information
 permalink: /program-information/
-
-sidebar_id: 2
 hero_image: cpr
+sidebar_id: 2
 ---
 
 ## **Welcome** - Water safety & survival

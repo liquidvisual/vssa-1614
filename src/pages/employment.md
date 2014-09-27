@@ -2,7 +2,6 @@
 layout: text_page_no_sidebar
 title: Employment
 permalink: /employment/
-
 hero_image: "instructors"
 ---
 

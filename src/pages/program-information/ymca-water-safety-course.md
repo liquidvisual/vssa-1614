@@ -2,9 +2,8 @@
 layout: text_page
 title: YMCA Water Safety Course
 permalink: /program-information/levels-stages/ymca-water-safety-course/
-
-sidebar_id: 2
 hero_image: cpr
+sidebar_id: 2
 ---
 
 #### 1. Octopus

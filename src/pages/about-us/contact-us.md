@@ -2,9 +2,8 @@
 layout: contact_us
 title: Contact Us
 permalink: /about-us/contact-us/
-
-sidebar_id: 6
 hero_image: kids-carrying-surfboard
+sidebar_id: 6
 ---
 
 ## Service with a smile

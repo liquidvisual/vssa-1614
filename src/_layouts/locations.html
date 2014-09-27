@@ -18,7 +18,7 @@ layout: internal
             {% for city in (cities) %}
                 {% assign id = city.title | downcase | replace: ' ', '-' %}
                 <dd class="accordion-navigation">
-                    <a href="{{ id | prepend: "#"}}"><b>{{ city.title }}</b> <i class="icon-arrow-down"></i><i class="icon-arrow-up"></i></a>
+                    <a href="{{ id | prepend: "#"}}"><b>{{ city.title }}</b> <i class="icon-angle-down"></i><i class="icon-angle-up"></i></a>
                     <div id="{{ id }}" class="content">
                         <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
                         {% for school in city.schools  %}
@@ -28,13 +28,11 @@ layout: internal
                     </div> <!-- .content -->
                 </dd> <!-- .accordion-navigation -->
             {% endfor %}
-        </dl> <!-- .accordion -->
 
-        <!-- ALL LOCATIONS - FLAT ALPHABETICAL LIST -->
+            <!-- ALL LOCATIONS - FLAT ALPHABETICAL LIST -->
 
-        <dl class="accordion" data-accordion>
             <dd class="accordion-navigation">
-                <a href="#all"><b>All Locations - Alphabetical List</b> <i class="icon-arrow-down"></i><i class="icon-arrow-up"></i></a>
+                <a href="#all"><b>All Locations - Alphabetical</b> <i class="icon-angle-down"></i><i class="icon-angle-up"></i></a>
                 <div id="all" class="content">
                     <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
                     {% for city in cities  %}

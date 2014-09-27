@@ -2,9 +2,8 @@
 layout: text_page
 title: Media
 permalink: /media/
-
-sidebar_id: 5
 hero_image: kids-in-pool
+sidebar_id: 5
 ---
 
 ## Clever Marketing

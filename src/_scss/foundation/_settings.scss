@@ -220,7 +220,7 @@ $h5-font-size: rem-calc(14); //rem-calc(18);
 // $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-$h1-font-reduction: rem-calc(6) !default; //10
+$h1-font-reduction: rem-calc(-0.95) !default; //10
 $h2-font-reduction: 0 !default; //10
 $h3-font-reduction: 0 !default; //5
 $h4-font-reduction: 0 !default; //5
