@@ -28,7 +28,7 @@ Check this [link](http://jekyllrb.com/docs/windows/#installation). Future builds
 
 ### Eek! This is Way Too Technical - What Is All This Crap?
 
-True! But stay with me. Jekyll is a Ruby based static site generator (blah blah), and arguably the most popular. Being able to leverage template logic and inheritance is just awesome. It allows me to abstract out or stub data to more closely emulate the back-end. This means less work for the dev who's porting code over. All of the template logic has been done for you! Just follow the comments and hints.
+True! But stay with me. Jekyll is a Ruby based static site generator (blah blah), and arguably the most popular. Being able to leverage template logic and inheritance is simply awesome. It allows one to abstract out or stub data to more closely emulate the back-end. This means less work for the back-end dev. All of the template logic has been done for you! Just follow the comments and hints.
 
 ### Resist the Urge to Cut Up the build HTML
 
@@ -36,13 +36,13 @@ Use it as a [reference](https://github.com/liquidvisual/vssa-1614/tree/master/bu
 
 # Quick Start
 
-The first thing you'll want to do if using Sublime Text is grab the Jekyll extension via [package control](https://sublime.wbond.net). This is important, and **you'll thank me later**. This will ensure all templates will have **appropriate syntax highlighting** - you'll be able to read through them faster and comments will be more obvious.
+The first thing you'll want to do if using Sublime Text is grab the [Jekyll package](https://sublime.wbond.net/packages/Jekyll) via [package control](https://sublime.wbond.net). This is important, and **you'll thank me later**. This will ensure all templates will have **appropriate syntax highlighting** - you'll be able to read through them faster and comments will be more obvious.
 
 ## Copy Over /assets Directory
 
-Jump into the [build folder](https://github.com/liquidvisual/vssa-1614/tree/master/build) and grab the *entire* /assets folder. Put it into your project's root directory. This contains all the compiled CSS, fonts, images and JavaScript. Also grab the favicon.ico.
+Jump into the [build folder](https://github.com/liquidvisual/vssa-1614/tree/master/build) and grab the *entire* /assets folder. Put it into your project's root directory. This contains all the compiled CSS, fonts, images and JavaScript. Also grab the **favicon.ico**.
 
-That's all you'll need from the build directory. From this point on, all the action is in the /src.
+That's all you'll need from the /build directory. From this point on, all the action is in the /src.
 
 ## Access /_layouts/master.html
 
@@ -64,13 +64,17 @@ With this:
 
     <link rel="stylesheet" href="/assets/css/optimized.css">
 
-The same applies to the Javascript. That's probably the trickiest bit that's not so obvious.
+The same applies to the Javascript. That's probably the trickiest bit that's not so obvious. The end result will look like this:
+
+    <script src="/scripts/priority-optimized.js"></script> <!-- In the head -->
+
+    <script src="/scripts/optimized.js"></script> <!-- Before closing body -->
 
 ## Copy Over Partials in /_includes
 
 Templates reference partials from this folder.
 
-## Where Data Comes From
+# Where Data Comes From
 
 ### /_data
 
@@ -78,7 +82,7 @@ Some templates and includes will draw data (such as the navigation and locations
 
 ### /pages
 
-Each Jekyll page is kickstarted with a single MARKDOWN file acting as the 'seed'. These files contain meta data, unique permalink and page specific variables which get passed into the layouts. They also contain body text which is stored as:
+Each Jekyll page is kickstarted with a single MARKDOWN file acting as the 'seed'. These files contain meta data, permalinks and page specific variables which get passed into the layouts. They also contain body text which is stored as:
 
     {{ content }}
 
@@ -86,14 +90,14 @@ This is similiar to renderBody(). Think of anything inside /pages as being conte
 
 ### Front Matter
 
-Every template and markdown file (except the master.html) contains front matter in the form of Yaml at the head of the document. This is used to specify layouts and page variables. Some data is stubbed inside the actual template - for quick access.
+Every layout and markdown file (except the master) contain front matter in the form of YAML at the head of the document. This is used to specify layouts and page variables. Some data is stubbed inside the actual layout - for quick access.
 
-As a general rule of thumb; if variables are in the front-matter, they're page variables and user editable. If they're inside the actual layout - they're specific to the individual layout.
+As a general rule of thumb; if variables are in the front-matter, they're page variables and user editable. If they're inside the actual layout - it's for layout logic.
 
 # Updating Compiled Assets
 
 ## The Quick Way
 
-Simply create a new stylesheet or Javascript and link to it in master. These files can store quick fixes and time sensitive updates. At a later time, they can be absorbed into the Sass files and recompiled with a **grunt build**.
+Simply create a new stylesheet or Javascript and link to it in the master.html. These files can store quick fixes and time sensitive updates. At a later time, they can be absorbed into the Sass files and recompiled with a **grunt build**.
 
-In future, when updates are made - one only needs to copy over the /assets folder from the repo.
+In future, when updates are made - one only needs to copy over the build/assets folder from the repo.
