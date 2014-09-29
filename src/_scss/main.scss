@@ -746,6 +746,10 @@ $backgrounds: kids-carrying-surfboard, instructors, cpr, kids-in-pool, beach-gam
 	vertical-align: middle;
 }
 
+.sponsor-list {
+	margin-bottom: $vertical-spacing;
+}
+
 .sponsor-list > li > a {
 	height: 90px;
 	display: table;
@@ -754,14 +758,6 @@ $backgrounds: kids-carrying-surfboard, instructors, cpr, kids-in-pool, beach-gam
 .sponsor-list .img {
 	display: table-cell;
 	vertical-align: middle;
-}
-
-/* Getting too specific - Requested but not recommended */
-.sponsor-list .hack-size {
-
-	@media #{$large-up} {
-		width: 176px;
-	}
 }
 
 //=========================================
@@ -809,7 +805,7 @@ $backgrounds: kids-carrying-surfboard, instructors, cpr, kids-in-pool, beach-gam
 }
 
 .hero .facebook-button i {
-	font-size: rem-calc(42);
+	font-size: rem-calc(30);
 	position: absolute;
 	top: 50%;
 	line-height: 0;
@@ -821,6 +817,7 @@ $backgrounds: kids-carrying-surfboard, instructors, cpr, kids-in-pool, beach-gam
 
 .hero .facebook-button .icon-angle-right {
 	right: rem-calc(20);
+	font-size: rem-calc(40);
 }
 
 .no-touch .hero .facebook-button:hover {
