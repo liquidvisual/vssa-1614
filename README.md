@@ -31,7 +31,7 @@ Check this [link](http://jekyllrb.com/docs/windows/#installation). Future builds
 
 ---
 
-## Eek! This is Way Too Technical - What Is All This Crap?
+### Eek! This is Way Too Technical - What Is All This Crap?
 
 True! But stay with me. Jekyll is a Ruby based static site generator (blah blah), and arguably the most popular. Being able to leverage template logic and inheritance is just awesome. It allows me to abstract out or stub data to more closely emulate the back-end. This means less work for the dev who's porting code over. All of the template logic has been done for you! One just needs to follow the hints.
 
@@ -43,7 +43,7 @@ Use it as a [reference](https://github.com/liquidvisual/vssa-1614/tree/master/bu
 
 The first thing you'll want to do if using Sublime Text is grab the Jekyll extension via [package control](https://sublime.wbond.net). This is important, and **you'll thank me later**. This will ensure all templates will have **appropriate syntax highlighting** - you'll be able to read through them faster and comments will be more obvious.
 
-## Copy Over /assets/ Directory
+## Copy Over /assets Directory
 
 Jump into the [build folder](https://github.com/liquidvisual/vssa-1614/tree/master/build) and grab the *entire* /assets/ folder. Put it into your project's root directory. This contains all the compiled CSS, fonts, images and JavaScript. Also grab the favicon.ico.
 
@@ -71,17 +71,28 @@ With this:
 
 The same applies to the Javascript. That's probably the trickiest bit that's not so obvious.
 
-## Copy Over Partials in /_includes/
+## Copy Over Partials in /_includes
 
 Templates reference partials from this folder.
 
-## Understand Where Data Comes From
+## Where Data Comes From
 
-### /_data/
+### /_data
 
-Some templates and includes will draw data (such as the navigation and locations listing) from YAML files located inside **/_data/**. This keeps things external and templates will use basic loops and conditionals to interact with this data, similiar to how it will in the back-end.
+Some templates and includes will draw data (such as the navigation and locations listing) from YAML files located inside **/_data/**. This keeps things external and templates are able to use basic loops and conditionals to interact with it, similiar to the logic in the back-end.
 
-### /pages/
+### /pages
+
+Each Jekyll page is kickstarted with a single MARKDOWN file acting as the 'seed'. These files contain meta data, unique permalink and page specific variables which get passed into the layouts. They also contain body text which is stored as:
+
+    {{ content }}
+
+This is similiar to renderBody(). Think of anything inside /pages as being content which a user can control.
+
+### Front Matter
+
+Every template and markdown file (except the master.html) contains front matter in the form of Yaml at the head of the document. This is used to specify layouts and page variables. Some data is stubbed inside the actual template - for quick access. As a general rule of thumb; if variables are in the front-matter, they're page variables and user editable. If they're inside the actual layout - they're specific to the individual layout.
+
 
 
 
