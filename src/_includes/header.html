@@ -1,22 +1,18 @@
 {% comment %}
-    IGNORE: Interchange code reference for self:
+    IGNORE THIS COMMENT: Interchange code reference for dev self:
     <img width="200" data-interchange="[/ImageGen.ashx?width=200&image=@logo.Url, (default)], [@logo.Url, (retina)]" alt="@logo.Name">
 {% endcomment %}
 
-{% assign logo = site.data.settings.logo  %}
-{% assign affiliate_logo = site.data.settings.affiliate_logo %}
-{% assign affiliate_link = site.data.settings.affiliate_logo %}
-{% assign seo_title = site.data.settings.seo_title  %}
-{% assign company_title = site.data.settings.company %}
+{% assign settings = site.data.settings %}
 
 <div class="row outer-row">
     <div class="medium-6 columns">
-        <a class="logo" href="/" title="{{ seo_title }}" itemprop="url">
-        <img src="{{ logo | prepend: site.assets }}" alt="{{ company_title }}" itemprop="logo"></a>
+        <a class="logo" href="/" title="{{ settings.seo_title }}" itemprop="url">
+        <img src="{{ settings.logo | prepend: site.assets }}" alt="{{ settings.company_title }}" itemprop="logo"></a>
     </div>
     <div class="medium-6 columns text-right show-for-large-up">
-        <a class="affiliate-logo" href="/" title="{{ affiliate_logo }}" target="_blank">
-        <img width="72" src="{{ affiliate_logo | prepend: site.baseurl | prepend: site.assets }}" alt="..."></a>
+        <a class="affiliate-logo" href="/" title="{{ settings.affiliate_logo }}" target="_blank">
+        <img width="72" src="{{ settings.affiliate_logo | prepend: site.assets }}" alt="..."></a>
     </div>
 </div>
 

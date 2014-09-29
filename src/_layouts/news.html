@@ -3,6 +3,7 @@ layout: internal
 ---
 
 {% assign news = site.pages | where: "type", "news_item" %}
+{% assign stubbed_image_url = "http://lorempixel.com/400/300/nature?" %}
 
 <!-- MAIN -->
 <div class="columns">
@@ -12,7 +13,7 @@ layout: internal
         <article class="news-item">
             <div class="row">
                 <div class="medium-3 columns">
-                    <a href="{{ item.url }}" class="img"><img src="http://lorempixel.com/400/300/nature?{{forloop.index}}" alt="..."></a>
+                    <a href="{{ item.url }}" class="img"><img src="{{ stubbed_image_url | append: forloop.index }}" alt="..."></a>
                 </div>
                 <div class="medium-9 columns">
                     <a href="{{ item.url }}"><h2>{{ item.title }}</h2></a>

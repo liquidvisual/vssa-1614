@@ -6,18 +6,19 @@
     <div class="row">
         <div class="large-10 large-offset-2 columns">
 
+            {% comment %} Pages can specify whether to include red Call-to-action button {% endcomment %}
             {% if sidebar_enroll_cta %}
                 <a href="/vacswim-locations/" class="button expand alert enroll-button"><i class="icon-book"></i> Book / Enrol Online <i class="icon-angle-right"></i></a>
             {% endif %}
 
-            {% comment %} If page specifies advert - display it on top here {% endcomment %}
+            {% comment %} If Page specifies advert - display it on top here {% endcomment %}
             {% if sidebar_advert %}
                 <div class="advertisements section">
                     {{ sidebar_advert }}
                 </div>
             {% endif %}
 
-            {% comment %} If SIDEBAR_ID is passed, create second level menu {% endcomment %}
+            {% comment %} If SIDEBAR_ID is passed, create second level menu - rolling through data (site sections) from /data/navigation.yml {% endcomment %}
             {% if sidebar_id %}
 
                 <ul class="side-nav no-bullet">
@@ -46,6 +47,6 @@
                 </ul>
             {% endif %}
 
-        </div>
-    </div>
-</aside>
+        </div> <!-- .columns -->
+    </div> <!-- .row -->
+</aside> <!-- .sidebar -->

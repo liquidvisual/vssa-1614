@@ -1,12 +1,11 @@
 ---
 layout: master
+banner_header: "SA Water VACSWIM is a South Australian Government funded program for primary school aged children"
+banner_link: /vacswim-locations/
 ---
 
 {% assign settings = site.data.settings  %}
 {% assign news = site.pages | where: "type", "news_item" %}
-{% assign hero_image = "/img/template/homepage-hero.jpg" | prepend: site.assets %}
-{% assign banner_header = "SA Water VACSWIM is a South Australian Government funded program for primary school aged children" %}
-{% assign banner_link = "/vacswim-locations/" %}
 
 <div class="homepage">
 
@@ -31,13 +30,13 @@ layout: master
 	</div> <!-- .header-wrapper -->
 
 	<!-- HERO -->
-	<div class="hero" style="background-image: url({{ hero_image }})">
+	<div class="hero">
 
 	    <div class="row outer-row">
 	        <div class="medium-6 medium-offset-6 large-5 large-offset-7 columns medium-text-right collapse-left">
 	            <div class="animated fadeInLeft">
-	                <h1>{{ banner_header | is_text_field }}</h1>
-	                <p><a href="{{ banner_link | is_data }}" class="button">
+	                <h1>{{ page.banner_header }}</h1>
+	                <p><a href="{{ page.banner_link }}" class="button">
 	                	<i class="icon-child"></i>
 	                	Find your nearest VACSWIM location and book now!
 	                	<i class="icon-angle-right"></i>

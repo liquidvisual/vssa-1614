@@ -2,6 +2,7 @@
     Note: Navigation data is pulled from /data/navigation.yml
 {% endcomment %}
 
+{% assign settings = site.data.settings %}
 {% assign navigation = site.data.navigation %}
 
 <ul>
@@ -37,5 +38,5 @@
 
     {% comment %} Hardcoded Extras {% endcomment %}
     <li class="right-for-medium"><a href="/login/"><i class="icon-lock"></i>&nbsp; Operator Resources</a></li>
-    <li class="facebook"><a href="{{ site.data.settings.facebook }}"><span><i class="icon-facebook"></i></span></a></li>
+    <li class="facebook"><a href="{{ settings.facebook }}"><span><i class="icon-facebook"></i></span></a></li>
 </ul>

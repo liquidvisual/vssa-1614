@@ -4,6 +4,8 @@ hero_header_override: News
 breadcrumbs: true
 ---
 
+{% assign stubbed_image_url = "http://lorempixel.com/400/300/nature" %}
+
 <!-- MAIN -->
 <div class="columns">
     <main class="main">
@@ -19,7 +21,7 @@ breadcrumbs: true
                     <p><strong><a href="#">Teach your child water safety - SA Water VACSWIM, water safety and water survival</a> - it's the holiday fun thing to do!</strong></p>
                 </div>
                 <div class="medium-4 columns">
-                    <p><img src="http://lorempixel.com/400/300/nature?{{forloop.index}}" alt="..."></p>
+                    <p><img src="{{ stubbed_image_url }}" alt="..."></p>
                 </div>
             </div>
         </article>
