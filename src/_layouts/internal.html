@@ -2,14 +2,14 @@
 layout: master
 ---
 
-{% assign hero_image = page.hero_image | prepend: "/img/template/" | prepend: site.assets %}
+{% assign hero_image = page.hero_image %}
 {% assign has_sidebar = page.sidebar_id %}
 {% assign hero_header = page.hero_header_override %}
 
-<div class="internal">
+<div class="internal {{ hero_image }}">
 
     <!-- HERO TOP -->
-    <div class="hero-top" style="background-image: url({{ hero_image | append: "-top.jpg" }})"></div>
+    <div class="hero-top"></div>
 
     <div class="header-wrapper">
 
@@ -32,7 +32,7 @@ layout: master
     </div> <!-- .header-wrapper -->
 
     <!-- HERO -->
-    <section class="hero" style="background-image: url({{ hero_image | append: ".jpg" }})">
+    <section class="hero">
         <div class="hero-header">
             <div class="row outer-row">
                 <div class="columns">
@@ -61,6 +61,6 @@ layout: master
     </div> <!-- .row -->
 
     <!-- HERO BOTTOM -->
-    <div class="hero-bottom" style="background-image: url({{ hero_image | append: "-bottom.jpg" }})"></div>
+    <div class="hero-bottom"></div>
 
 </div> <!-- .internal -->

@@ -426,7 +426,7 @@ html.mm-opening .hamburger:after {
 	line-height: 1.2;
 	color: #052A32;
 	text-align: right;
-	margin: rem-calc(40 0);
+	margin: rem-calc(40 0 0 0);
 
 	@media #{$large-up} {
 		font-size: rem-calc(22);
@@ -460,7 +460,7 @@ html.mm-opening .hamburger:after {
 }
 
 //=========================================
-// Hero Internal
+// Hero Internal - and Backgrounds
 //=========================================
 
 .internal .hero {
@@ -472,6 +472,22 @@ html.mm-opening .hamburger:after {
 		height: rem-calc(144 + 65);
 	}
 }
+
+/* These are classes applied to the internal template */
+$backgrounds: kids-carrying-surfboard, instructors, cpr, kids-in-pool, beach-games;
+
+/* Loop through available backgrounds */
+@each $image in $backgrounds {
+  .internal.#{$image} {
+	.hero-top { background-image: url('../img/template/#{$image}-top.jpg'); }
+	.hero { background-image: url('../img/template/#{$image}.jpg'); }
+	.hero-bottom { background-image: url('../img/template/#{$image}-bottom.jpg'); }
+  }
+}
+
+//=========================================
+// Hero Header
+//=========================================
 
 .internal .hero-header {
 	position: absolute;
@@ -774,6 +790,46 @@ html.mm-opening .hamburger:after {
 //-----------------------------------------------------------------
 // Template Buttons
 //-----------------------------------------------------------------
+
+.hero .facebook-button {
+	@extend .transition;
+	position: relative;
+	display: block;
+	margin-bottom: rem-calc(40);
+	background: #3A5796;
+	color: white;
+	padding: rem-calc(20 50 20 10);
+	font-size: rem-calc(18);
+	text-align: right;
+
+	span {
+		// text-align: right;
+		// display: block;
+	}
+}
+
+.hero .facebook-button i {
+	font-size: rem-calc(42);
+	position: absolute;
+	top: 50%;
+	line-height: 0;
+}
+
+.hero .facebook-button .icon-facebook {
+	left: rem-calc(15);
+}
+
+.hero .facebook-button .icon-angle-right {
+	right: rem-calc(20);
+}
+
+.no-touch .hero .facebook-button:hover {
+	color: black;
+}
+
+//=========================================
+//
+//=========================================
 
 .lv-super .enroll-button {
 	margin-bottom: rem-calc(0);

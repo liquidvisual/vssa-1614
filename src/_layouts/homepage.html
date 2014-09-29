@@ -2,6 +2,7 @@
 layout: master
 ---
 
+{% assign settings = site.data.settings  %}
 {% assign news = site.pages | where: "type", "news_item" %}
 {% assign hero_image = "/img/template/homepage-hero.jpg" | prepend: site.assets %}
 {% assign banner_header = "SA Water VACSWIM is a South Australian Government funded program for primary school aged children" %}
@@ -42,6 +43,10 @@ layout: master
 	                	<i class="icon-angle-right"></i>
 	                	</a>
 	                </p>
+	                <!--- Facebook Button -->
+	                <a href="{{ settings.facebook }}" class="facebook-button show-for-small">
+	                	<i class="icon-facebook"></i><span>Vacswim SA Facebook</span><i class="icon-angle-right"></i>
+	                </a>
 	            </div>
 	        </div> <!-- .columns -->
 	    </div> <!-- .row -->
