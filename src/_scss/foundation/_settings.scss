@@ -1275,11 +1275,11 @@ $side-nav-link-padding: rem-calc(10 15);
 
 // These control the background color for the table and even rows
 // $table-bg: $white;
-// $table-even-row-bg: $snow  ;
+$table-even-row-bg: $white; //$snow;
 
 // These control the table cell border style
 // $table-border-style: solid;
-// $table-border-size: 1px;
+$table-border-size: 0; //1px;
 // $table-border-color: $gainsboro;
 
 // These control the table head styles

@@ -2,7 +2,7 @@
 /*
     MAIN.CSS
 
-    - Last updated: 29.09.14
+    - Last updated: 01.10.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -320,23 +320,6 @@ html.mm-opening .hamburger:after {
 	&:after {
 		border: 0;
 	}
-}
-
-#off-canvas-menu {
-	// background: #161E1F;
-}
-
-#off-canvas-menu .mm-list a.mm-subopen::before,
-#off-canvas-menu .mm-list > li:after {
-	// border-color: #272E2F;
-}
-
-#off-canvas-menu li a {
-	//color: darken($white, 15%);
-	//font-size: 1rem;
-	// padding-top: rem-calc(12);
-	// padding-bottom: rem-calc(12);
-	// line-height: 44px;
 }
 
 //-----------------------------------------------------------------
@@ -700,9 +683,6 @@ $backgrounds: kids-carrying-surfboard, instructors, cpr, kids-in-pool, beach-gam
 	}
 }
 
-//=========================================
-//
-//=========================================
 //-----------------------------------------------------------------
 // Footer
 //-----------------------------------------------------------------
@@ -881,6 +861,32 @@ $backgrounds: kids-carrying-surfboard, instructors, cpr, kids-in-pool, beach-gam
 // Special / Misc - Refactor Later
 //-----------------------------------------------------------------
 
+/* Table displays Supporters & Sponsors */
+
+table {
+	border-top: 1px solid #D5D5D5;
+
+	tr {
+		border-bottom: 1px solid #D5D5D5;
+		td {
+			vertical-align: top;
+			word-wrap: break-word;
+			padding: rem-calc(20);
+		}
+	}
+	@media #{$medium-up} {
+		table-layout: auto;
+	}
+}
+
+table img {
+	@media #{$medium-up} {
+		max-width: none;
+	}
+}
+
+/* Notice appears in location template */
+
 .notice {
 	color: $alert-color;
 }
@@ -910,6 +916,3 @@ $backgrounds: kids-carrying-surfboard, instructors, cpr, kids-in-pool, beach-gam
 //-----------------------------------------------------------------
 // Themes
 //-----------------------------------------------------------------
-//=========================================
-//
-//=========================================
