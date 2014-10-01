@@ -475,7 +475,7 @@ html.mm-opening .hamburger:after {
 }
 
 /* These are classes applied to the internal template */
-$backgrounds: kids-carrying-surfboard, instructors, cpr, kids-in-pool, beach-games;
+$backgrounds: kids-carrying-surfboard, instructors, cpr, kids-in-pool, beach-games, kids-on-boards, kids-in-pool-02, kids-in-pool-closeup;
 
 /* Loop through available backgrounds */
 @each $image in $backgrounds {
