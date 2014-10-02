@@ -2,7 +2,7 @@
 /*
     MAIN.CSS
 
-    - Last updated: 01.10.14
+    - Last updated: 02.10.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -640,6 +640,7 @@ $backgrounds: kids-carrying-surfboard, instructors, cpr, kids-in-pool, beach-gam
 	position: relative;
 	border-radius: $global-radius;
 	margin-bottom: $vertical-spacing;
+	padding-right: rem-calc(42) !important;
 }
 
 .accordion-navigation i {
@@ -806,7 +807,7 @@ $backgrounds: kids-carrying-surfboard, instructors, cpr, kids-in-pool, beach-gam
 }
 
 //=========================================
-//
+// Enroll Button
 //=========================================
 
 .lv-super .enroll-button {
@@ -836,6 +837,24 @@ $backgrounds: kids-carrying-surfboard, instructors, cpr, kids-in-pool, beach-gam
 //-----------------------------------------------------------------
 // Forms
 //-----------------------------------------------------------------
+
+/* Added by Alan */
+.form-success {
+    padding: rem-calc(12 20 12 20);
+    margin: rem-calc(0 0 20 0);
+    background-color: #99c305;
+    color: #fff;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+/* Needed for Umbraco */
+form#ctl04 .error {
+	position: relative;
+	top: -20px;
+	margin-bottom: 0;
+}
+
 //-----------------------------------------------------------------
 // Tooltips
 //-----------------------------------------------------------------
@@ -903,6 +922,27 @@ table img {
 
 .primary-color {
 	color: $primary-color;
+}
+
+//=========================================
+// Added by Alan
+//=========================================
+
+.smaller {
+	font-size: 100%;
+}
+
+#login-status {
+	font-size: 85%;
+	float: right;
+	text-align: right;
+	padding: rem-calc(15 0);
+	line-height: 130%;
+}
+
+.program-operator-logo {
+	max-height: rem-calc(100);
+	max-width: rem-calc(400);
 }
 
 //-----------------------------------------------------------------
