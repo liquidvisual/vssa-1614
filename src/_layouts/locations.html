@@ -2,8 +2,6 @@
 layout: internal
 ---
 
-{% assign cities = site.data.locations %}
-
 <!-- MAIN -->
 <div class="columns">
     <main class="main">
@@ -12,38 +10,31 @@ layout: internal
             {{ content }}
         </div>
 
-        <!-- Accordion Module -->
+        <!-- Tabs for mobile / tablet -->
+        <div class="hide-for-large-up" aria-hidden="true">
+            <dl class="tabs" data-tab>
+                <dd class="list-view active"><a href="#panel1"><span class="text"><i class="icon-align-left"></i>&nbsp; List View</a></span></dd>
+                <dd class="map-view"><a href="#panel2"><span class="text"><i class="icon-map-marker"></i>&nbsp; Map View</a></span></dd>
+            </dl>
+            <div class="tabs-content">
+                <div class="content active" id="panel1">
+                    {% include accordion.html %}
+                </div>
+                <div class="content" id="panel2">
+                    {% include google_map.html %}
+                </div>
+            </div>
+        </div> <!-- .hide-for-small -->
 
-        <dl class="accordion" data-accordion>
-            {% for city in (cities) %}
-                {% assign id = city.title | downcase | replace: ' ', '-' %}
-                <dd class="accordion-navigation">
-                    <a href="{{ id | prepend: "#"}}"><b>{{ city.title }}</b> <i class="icon-angle-down"></i><i class="icon-angle-up"></i></a>
-                    <div id="{{ id }}" class="content">
-                        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
-                        {% for school in city.schools  %}
-                            <li><a href="{{ school.url }}">{{ school.title }}</a></li>
-                        {% endfor %}
-                        </ul>
-                    </div> <!-- .content -->
-                </dd> <!-- .accordion-navigation -->
-            {% endfor %}
-
-            <!-- ALL LOCATIONS - FLAT ALPHABETICAL LIST -->
-
-            <dd class="accordion-navigation">
-                <a href="#all"><b>All Locations - Alphabetical</b> <i class="icon-angle-down"></i><i class="icon-angle-up"></i></a>
-                <div id="all" class="content">
-                    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
-                    {% for city in cities  %}
-                        {% for school in city.schools | order: ascending %}
-                            <li><a href="{{ school.url }}">{{ school.title }}</a></li>
-                        {% endfor %}
-                    {% endfor %}
-                    </ul>
-                </div> <!-- .content -->
-            </dd> <!-- .accordion-navigation -->
-        </dl> <!-- .accordion -->
+        <!-- Map displayed on side in desktop -->
+        <div class="row show-for-large-up">
+            <div class="large-6 columns">
+                {% include accordion.html %}
+            </div> <!-- .columns -->
+            <div class="large-6 columns">
+                {% include google_map.html %}
+            </div> <!-- .columns -->
+        </div> <!-- .row -->
 
     </main> <!-- .main -->
 </div> <!-- .columns -->

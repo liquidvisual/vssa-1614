@@ -1,0 +1,32 @@
+{% assign cities = site.data.locations %}
+
+<!-- Accordion Module -->
+<dl class="accordion" data-accordion>
+    {% for city in (cities) %}
+        {% assign id = city.title | downcase | replace: ' ', '-' %}
+        <dd class="accordion-navigation">
+            <a href="{{ id | prepend: "#"}}"><b>{{ city.title }}</b> <i class="icon-angle-down"></i><i class="icon-angle-up"></i></a>
+            <div id="{{ id }}" class="content">
+                <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+                {% for school in city.schools  %}
+                    <li><a href="{{ school.url }}">{{ school.title }}</a></li>
+                {% endfor %}
+                </ul>
+            </div> <!-- .content -->
+        </dd> <!-- .accordion-navigation -->
+    {% endfor %}
+
+    <!-- ALL LOCATIONS - FLAT ALPHABETICAL LIST -->
+    <dd class="accordion-navigation">
+        <a href="#all"><b>All Locations - Alphabetical</b> <i class="icon-angle-down"></i><i class="icon-angle-up"></i></a>
+        <div id="all" class="content">
+            <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+            {% for city in cities  %}
+                {% for school in city.schools | order: ascending %}
+                    <li><a href="{{ school.url }}">{{ school.title }}</a></li>
+                {% endfor %}
+            {% endfor %}
+            </ul>
+        </div> <!-- .content -->
+    </dd> <!-- .accordion-navigation -->
+</dl> <!-- .accordion -->

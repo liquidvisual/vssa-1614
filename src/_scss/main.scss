@@ -2,7 +2,7 @@
 /*
     MAIN.CSS
 
-    - Last updated: 02.10.14
+    - Last updated: 09.10.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -633,8 +633,96 @@ $backgrounds: kids-carrying-surfboard, instructors, cpr, kids-in-pool, beach-gam
 }
 
 //=========================================
+// Tabs
+//=========================================
+
+.tabs {
+	position: relative;
+	margin-bottom: rem-calc(15) !important;
+	// border-bottom: 1px solid #C4C4C4;
+	overflow: hidden;
+
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 1px;
+		width: 100%;
+		background: #C4C4C4;
+	}
+
+	@media #{$small-only} {
+		display: table;
+		width: 100%;
+	}
+}
+
+.tabs dd {
+	@media #{$small-only} {
+		position: relative;
+		top: -1px;
+		display: table-cell;
+		float: none;
+		text-align: center;
+	}
+}
+
+.tabs dd.active {
+	@media #{$small-only} {
+		top: 0;
+	}
+}
+
+.tabs dd {
+	z-index: 1;
+}
+
+.tabs dd.active .text {
+	position: relative;
+	top: -1px;
+}
+
+.tabs .list-view.active {
+	border: 1px solid #C4C4C4;
+	border-bottom: 0;
+
+}
+
+.tabs .map-view.active {
+	border: 1px solid #C4C4C4;
+	border-bottom: 0;
+	// position: relative;
+	// top: 0px;
+
+}
+
+.tabs dd a {
+	padding-left: rem-calc(25);
+	padding-right: rem-calc(80);
+
+	@media #{$small-only} {
+		padding-left: rem-calc(10);
+		padding-right: rem-calc(10);
+	}
+}
+
+/* What gives, Webkit?! */
+.lv-super .accordion,
+.lv-super .accordion *,
+.lv-super .accordion a,
+.lv-super .tabs-content .content,
+.lv-super .tabs a {
+    outline: none !important;
+}
+
+//=========================================
 // Accordion Module
 //=========================================
+
+.accordion {
+	margin-bottom: $vertical-spacing;
+}
 
 .accordion-navigation > a {
 	position: relative;
@@ -879,6 +967,12 @@ form#ctl04 .error {
 //-----------------------------------------------------------------
 // Special / Misc - Refactor Later
 //-----------------------------------------------------------------
+
+.google-map {
+	border: 1px solid #DBDBDB;
+}
+
+#map img{max-width: inherit;}
 
 /* Table displays Supporters & Sponsors */
 
