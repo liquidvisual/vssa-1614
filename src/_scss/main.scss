@@ -853,6 +853,43 @@ $backgrounds: kids-carrying-surfboard, instructors, cpr, kids-in-pool, beach-gam
 //-----------------------------------------------------------------
 // Social Networks
 //-----------------------------------------------------------------
+
+.social-networks {
+	margin: 0;
+}
+
+.social-networks li {
+	display: inline-block;
+	margin-right: rem-calc(5);
+}
+
+.social-networks a {
+	@extend .transition;
+	width: 33px;
+	height: 33px;
+	text-align: center;
+	color: white;
+	font-size: rem-calc(23);
+	line-height: 36px;
+	display: block;
+}
+
+.social-networks .facebook a {
+	background: #375493;
+
+	&:hover {
+		background: darken(#375493, 10%);
+	}
+}
+
+.social-networks .twitter a {
+	background: #56CBFE;
+
+	&:hover {
+		background: darken(#56CBFE, 10%);
+	}
+}
+
 //-----------------------------------------------------------------
 // Template Buttons
 //-----------------------------------------------------------------
