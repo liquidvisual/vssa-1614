@@ -1,0 +1,46 @@
+/*
+    ACCORDION.CSS
+
+    - Last updated: ^^^^^^^^
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Accordion
+//-----------------------------------------------------------------
+
+.accordion {
+	margin-bottom: $vertical-spacing;
+}
+
+.accordion-navigation > a {
+	position: relative;
+	border-radius: $global-radius;
+	margin-bottom: $vertical-spacing;
+	padding-right: rem-calc(42) !important;
+}
+
+.accordion-navigation i {
+	position: absolute;
+	top: 50%;
+	right: rem-calc(15);
+	font-size: rem-calc(34);
+	line-height: 0;
+	color: #D1E2E8;
+}
+
+/* Up/Down Arrows */
+.accordion-navigation.active .icon-angle-down {
+	display: none;
+}
+
+.accordion-navigation.active .icon-angle-up {
+	display: block;
+	top: 45%;
+}
+
+.accordion-navigation .icon-angle-up {
+	display: none;
+}

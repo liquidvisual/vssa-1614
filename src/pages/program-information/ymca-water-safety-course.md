@@ -1,5 +1,5 @@
 ---
-layout: text_page
+layout: internal/text_page
 title: YMCA Water Safety Course
 permalink: /program-information/levels-stages/ymca-water-safety-course/
 hero_image: cpr

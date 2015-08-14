@@ -1,5 +1,5 @@
 ---
-layout: text_page
+layout: internal/text_page
 title: Introducing the YMCA
 permalink: /about-us/introducing-the-ymca/
 hero_image: kids-carrying-surfboard

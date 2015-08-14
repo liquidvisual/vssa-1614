@@ -1,5 +1,5 @@
 ---
-layout: text_page
+layout: internal/text_page
 title: Media
 permalink: /media/
 hero_image: kids-in-pool

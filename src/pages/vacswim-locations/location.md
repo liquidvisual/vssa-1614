@@ -1,5 +1,5 @@
 ---
-layout: locations_item
+layout: internal/locations_item
 title: Vacswim Locations
 permalink: /vacswim-locations/location/
 hero_image: kids-carrying-surfboard

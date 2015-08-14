@@ -1,0 +1,82 @@
+/*
+	LIQUIDVISUAL BREADCRUMBS :: A Personal Framework
+
+	- updated: 12.12.14
+	- liquidvisual.com
+
+	- Notes -
+
+	- A better responsive alternative to Foundation's breadcrumbs.
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Breadcrumbs
+//-----------------------------------------------------------------
+
+.lv-breadcrumbs {
+	margin: 0 0 0 0;
+	// padding: 0 0 rem-calc(15) 0;
+	padding: rem-calc(6 0);
+	// border-bottom: 1px solid #ECECEC;
+	border-bottom: 0;
+	font-size: 0.80em;
+	font-weight: 400;
+	list-style: none;
+	text-transform: capitalize;
+
+	li {
+		display: inline-block;
+		line-height: 1;
+		color: #888;
+
+		&:after {
+			font-family: "FontAwesome";
+			// content: "\203A";
+			content: "\f105";
+			display: inline-block;
+			margin: 0 rem-calc(8);
+			font-weight: bold;
+			// color: #BFBFBF;
+			color: #555;
+		}
+
+		&:first-child:after {
+			// content: "";
+			// margin: 0 rem-calc(15) 0 0;
+		}
+
+		&:last-child:after {
+			content: "";
+		}
+	}
+
+	a {
+		display: inline-block;
+
+		/* Shorten for mobile with ellipsis */
+		@media (max-width: 30em) {
+			max-width: rem-calc(100);
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			display: inline-block;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// Legacy IE-8
+//-----------------------------------------------------------------
+
+// .lt-ie9 .lv-breadcrumbs li:before {
+// 	content: "/";
+// 	display: inline-block;
+// 	margin: 0 5px;
+// 	color: #BFBFBF;
+// }
+
+// .lt-ie9 .lv-breadcrumbs li:first-child:before {
+// 	content: "";
+// }

@@ -22,23 +22,19 @@
     <!-- Google Fonts CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
 
-    <!-- build:css /assets/css/optimized.css -->
-    <link rel="stylesheet" href="/vendor/animate.css/animate.min.css">
-    <link rel="stylesheet" href="/css/mmenu/jquery-mmenu.css">
-    <link rel="stylesheet" href="/css/foundation/foundation.css">
-    <link rel="stylesheet" href="/css/foundation-icons.css">
-    <link rel="stylesheet" href="/css/icomoon-icons.css">
-    <link rel="stylesheet" href="/css/liquidvisual/liquidvisual.css">
+    <!-- build:css({src,.tmp}) /assets/css/optimized.css -->
+    <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <!-- endbuild -->
 
-    <!-- build:js /assets/scripts/priority-optimized.js -->
-    <script src="/vendor/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
+    <!-- Priority Scripts -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="/scripts/maps.js"></script>
 
 </head>
 <body>
-    <div class="lv-super developerX">
+    <div class="lv-super dev-mode-enabledX">
         <div class="lv-page">
 
             {{ content }}
@@ -52,7 +48,7 @@
     </div> <!-- .lv-super -->
 
     <!-- OFF-CANVAS MENU -->
-    <nav id="off-canvas-menu" class="hide" aria-hidden="true">
+    <nav id="off-canvas-menu" aria-hidden="true">
         {% include navigation.html %}
     </nav>
 
@@ -65,59 +61,55 @@
 
     <!-- ***** JAVASCRIPT ***** -->
 
-    <!-- build:js /assets/scripts/optimized.js -->
-    <script src="/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="/vendor/jquery-placeholder/jquery.placeholder.js"></script>
-    <script src="/vendor/jQuery.mmenu/src/js/jquery.mmenu.min.all.js"></script>
-    <script src="/vendor/fastclick/lib/fastclick.js"></script>
-    <script src="/vendor/nprogress/nprogress.js"></script>
-    <script src="/vendor/foundation/js/foundation/foundation.js"></script>
-    <script src="/vendor/foundation/js/foundation/foundation.accordion.js"></script>
-    <script src="/vendor/foundation/js/foundation/foundation.abide.js"></script>
-    <script src="/vendor/foundation/js/foundation/foundation.tab.js"></script>
-
-    {% comment %}
-        DEV REFERENCE ONLY: Don't include in markup.
-
-      ** LIBS **
-        <script src="/vendor/jquery.scrollTo/jquery.scrollTo.min.js"></script>
-        <script src="/vendor/WOW/dist/wow.min.js"></script>
-        <script src="/scripts/legacy/jquery-1.11.1.min.js"></script>
-        <script src="/vendor/fastclick/lib/fastclick.js"></script> <-- this conflicts with animations
-        <script src="/scripts/jquery-mmenu-min-all.js"></script>
-
-      ** FOUNDATION 5 **
-        <script src="/vendor/bxSlider/jquery.bxslider.min.js"></script>
-        <script src="/vendor/foundation/js/foundation/foundation.js"></script>
-        <script src="/vendor/foundation/js/foundation/foundation.abide.js"></script>
-        <script src="/vendor/foundation/js/foundation/foundation.accordion.js"></script>
-        <script src="/vendor/foundation/js/foundation/foundation.alert.js"></script>
-        <script src="/vendor/foundation/js/foundation/foundation.clearing.js"></script>
-        <script src="/vendor/foundation/js/foundation/foundation.dropdown.js"></script>
-        <script src="/vendor/foundation/js/foundation/foundation.equalizer.js"></script>
-        <script src="/vendor/foundation/js/foundation/foundation.interchange.js"></script>
-        <script src="/vendor/foundation/js/foundation/foundation.joyride.js"></script>
-        <script src="/vendor/foundation/js/foundation/foundation.magellan.js"></script>
-        <script src="/vendor/foundation/js/foundation/foundation.offcanvas.js"></script>
-        <script src="/vendor/foundation/js/foundation/foundation.reveal.js"></script>
-        <script src="/vendor/foundation/js/foundation/foundation.slider.js"></script>
-        <script src="/vendor/foundation/js/foundation/foundation.tab.js"></script>
-        <script src="/vendor/foundation/js/foundation/foundation.tooltip.js"></script>
-        <script src="/vendor/foundation/js/foundation/foundation.topbar.js"></script>
-    {% endcomment %}
-
+    <!-- build:js(src) /assets/scripts/optimized.js -->
+    <script src="/_bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="/_bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all.js"></script>
+    <script src="/_bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="/_bower_components/nprogress/nprogress.js"></script>
+    <script src="/_bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="/_bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+    <script src="/_bower_components/foundation/js/foundation/foundation.abide.js"></script>
+    <script src="/_bower_components/foundation/js/foundation/foundation.tab.js"></script>
     <script src="/scripts/main.js"></script>
+    <script src="/scripts/responsive-helper.js"></script>
+    <script src="/scripts/scrolling.js"></script>
     <!-- endbuild -->
 
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script src="/scripts/maps.js"></script>
+    {% comment %}
+    <!--
+        ~~~ DEV REFERENCE ONLY ~~~
 
-    <!-- Fire Foundation -->
-    <script>$(document).foundation();</script>
+        ** FOUNDATION 5 **
+        <script src="/_bower_components/foundation/js/foundation/foundation.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.abide.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.alert.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.clearing.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.magellan.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.slider.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.tab.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.topbar.js"></script>
 
-    <script type="text/javascript">
+        ** OTHER **
+        <script src="/_bower_components/bxSlider/jquery.bxslider.min.js"></script>
+        <script src="/_bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+        <script src="/_bower_components/isotope/dist/isotope.pkgd.min.js"></script>
+        <script src="/_bower_components/slick.js/slick/slick.js"></script>
+        <script src="/_bower_components/WOW/dist/wow.min.js"></script>
+    -->
+    {% endcomment %}
 
-  </script>
+    <script>
+        $(document).foundation();
+    </script>
 
     <!-- Google Analytics Here -->
 

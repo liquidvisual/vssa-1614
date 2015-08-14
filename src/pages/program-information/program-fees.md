@@ -1,5 +1,5 @@
 ---
-layout: text_page
+layout: internal/text_page
 title: Program Fees
 permalink: /program-information/program-fees/
 hero_image: cpr

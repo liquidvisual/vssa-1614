@@ -1,5 +1,5 @@
 ---
-layout: news_item
+layout: internal/news_item
 title:  "That's Pie Country. They Do a Lot of Baking Up There."
 permalink: /news/thats-pie-country-they-do-a-lot-of-baking-up-there/
 type: news_item

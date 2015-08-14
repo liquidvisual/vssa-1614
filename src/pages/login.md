@@ -1,5 +1,5 @@
 ---
-layout: login
+layout: internal/login
 title: Login
 permalink: /login/
 hero_image: "instructors"

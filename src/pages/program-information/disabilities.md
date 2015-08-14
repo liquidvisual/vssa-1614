@@ -1,5 +1,5 @@
 ---
-layout: text_page
+layout: internal/text_page
 title: Disabilities
 permalink: /program-information/disabilities/
 hero_image: cpr

@@ -1,0 +1,71 @@
+/*
+    LISTS.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Sponsor List
+//-----------------------------------------------------------------
+
+.medium-block-grid-9 li {
+	vertical-align: middle;
+}
+
+.sponsor-list {
+	margin-bottom: $vertical-spacing;
+}
+
+.sponsor-list > li > a {
+	height: 90px;
+	display: table;
+}
+
+.sponsor-list .img {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+ul li {
+	// margin-bottom: rem-calc(5);
+}
+
+.triangle-list {
+	list-style: none;
+	margin-left: 0;
+
+	li {
+		padding-left: rem-calc(8);
+		margin-bottom: rem-calc(5);
+
+		a:before {
+			content: "\f0da";
+			// content: "\f04b";
+			font-family: "FontAwesome";
+			position: relative;
+			top: 1px;
+			left: -5px;
+			font-size: rem-calc(17);
+			color: $primary-color;
+		}
+	}
+
+	&[class*='block-grid'] li {
+		padding-bottom: 0; // Let list items set their own inner padding
+	}
+}
+
+//=========================================
+// Foundation List Override
+//=========================================
+
+ol ol ul, ol ul ul, ul ol ul, ul ul ul {
+    list-style: circle;
+}

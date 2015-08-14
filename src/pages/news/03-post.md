@@ -1,5 +1,5 @@
 ---
-layout: news_item
+layout: internal/news_item
 title:  "Nothing's Finer Than Being in Your Diner"
 permalink: /news/nothings-finer-than-being-in-your-diner/
 type: news_item

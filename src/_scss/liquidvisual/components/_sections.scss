@@ -1,0 +1,194 @@
+/*
+	LIQUIDVISUAL SECTIONS :: A Personal Framework
+
+	- updated: 15.01.15
+	- liquidvisual.com
+
+	- Notes -
+
+	- Repeatable patterns for content sections (chunks)
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$section-bottom: rem-calc(30) !default;
+
+$color-section-bg-1: $primary-color !default;
+$color-section-bg-2: $secondary-color !default;
+$color-section-bg-3: $tertiary-color !default;
+$color-section-bg-4: #8BCCB9 !default;
+$color-section-bg-5: aqua !default;
+
+//-----------------------------------------------------------------
+// Section Types
+//
+// 01. Section
+// Apply styles to all sections
+//-----------------------------------------------------------------
+
+.section {
+    position: relative;
+    margin-bottom: rem-calc(30);
+
+    &.has-small-padding  { padding: rem-calc(20 0);  }
+    &.has-medium-padding { padding: rem-calc(30 0);  }
+    &.has-large-padding  { padding: rem-calc(50 0);  }
+    &.has-xlarge-padding { padding: rem-calc(100 0); }
+
+    &.has-no-margin {
+        margin: 0;
+    }
+}
+
+//-----------------------------------------------------------------
+// Color Section
+//-----------------------------------------------------------------
+
+.color-section {
+    h1, h2 {
+        color: #222;
+    }
+
+    p {
+        // color: #222;
+    }
+
+    &.light {
+        h2, p, .button {
+            color: #222;
+            border-color: #222;
+        }
+    }
+
+    &.dark {
+        h2, p, .button {
+            color: white;
+            border-color: white;
+        }
+    }
+
+    &.color-1 { background-color: $color-section-bg-1; }
+    &.color-2 { background-color: $color-section-bg-2; }
+    &.color-3 { background-color: $color-section-bg-3; }
+    &.color-4 { background-color: $color-section-bg-4; }
+    &.color-5 { background-color: $color-section-bg-5; }
+}
+
+//-----------------------------------------------------------------
+// Image Section
+//-----------------------------------------------------------------
+
+.image-section {
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+
+    //=========================================
+    // Buttons
+    //=========================================
+
+    h2, p, .button {
+        color: white; // add variable
+        border-color: white; // add variable
+    }
+
+    //=========================================
+    // has-fixed-bg
+    //=========================================
+
+    &.has-fixed-bg {
+        background-attachment: fixed;
+    }
+
+    //=========================================
+    // has-color-overlay
+    //=========================================
+
+    &.has-color-overlay:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(#222, 0.5);
+
+    }
+}
+
+//-----------------------------------------------------------------
+// Claim Section
+//-----------------------------------------------------------------
+
+.claim-section {
+    background: white;
+    border-bottom: 1px solid #e1e1e1;
+
+    // &.has-small-padding  { padding: rem-calc(20);  }
+    // &.has-medium-padding { padding: rem-calc(30);  }
+    // &.has-large-padding  { padding: rem-calc(50);  }
+    // &.has-xlarge-padding { padding: rem-calc(100); }
+
+    // @media #{$large-up} {
+    //     &.has-small-padding  { padding: rem-calc(20 0);  }
+    //     &.has-medium-padding { padding: rem-calc(30 0);  }
+    //     &.has-large-padding  { padding: rem-calc(50 0);  }
+    //     &.has-xlarge-padding { padding: rem-calc(100 0); }
+    // }
+}
+
+//-----------------------------------------------------------------
+// Claim Module
+//-----------------------------------------------------------------
+
+.claim-module {
+    @media #{$medium-up} {
+        display: table;
+    }
+
+    .claim-left,
+    .claim-right {
+        @media #{$medium-up} {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+
+    .claim-left {
+        @media #{$medium-up} {
+            position: relative;
+            width: 65%;
+            padding-right: rem-calc(40);
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 10%;
+                right: 0;
+                width: 1px;
+                height: 80%;
+                background: #ddd;
+            }
+        }
+
+        @media #{$large-up} {
+            width: 70%;
+        }
+    }
+
+    .claim-right {
+        @media #{$medium-up} {
+            padding-left: rem-calc(40);
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+

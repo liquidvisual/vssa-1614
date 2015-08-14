@@ -1,0 +1,143 @@
+/*
+    HEADER.CSS
+
+    - Last updated: ^^^^^^^^
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Header Wrapper (Control over Header AND Navigation)
+//-----------------------------------------------------------------
+
+.header-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border-top: $vertical-spacing solid #37585D;
+	z-index: 10;
+
+	&.is-fixed {
+		position: fixed;
+		top: -20px;
+		border-bottom: 1px solid #eee;
+
+		@media #{$large-up} {
+		    border-top: 0;
+		    top: 0;
+		}
+	}
+
+	@media #{$large-up} {
+		border-color: transparent;
+	}
+}
+
+//-----------------------------------------------------------------
+// Header
+//-----------------------------------------------------------------
+
+.header {
+	position: relative;
+	height: $header-height-tiny;
+	background: $header-background-color;
+
+	@media #{$medium-up} {
+	    height: $header-height-large;
+	}
+
+	@media #{$large-up} {
+		box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.4);
+	}
+}
+
+//=========================================
+// Logo
+//=========================================
+
+.header .logo {
+	position: relative;
+	top: rem-calc(12);
+
+	@media #{$medium-up} {
+	    top: rem-calc(20);
+	}
+
+	img {
+		width: rem-calc(120); //rem-calc(175);
+
+		@media #{$medium-up} {
+			width: rem-calc(210);
+		}
+
+		@media #{$large-up} {
+			width: rem-calc(268);
+		}
+	}
+
+	@media #{$medium-up} {
+		top: rem-calc(25);
+	}
+
+	@media #{$large-up} {
+		top: rem-calc(15);
+	}
+}
+
+.header .affiliate-logo {
+	position: relative;
+	top: rem-calc(26);
+}
+
+//=========================================
+// Hamburger
+//=========================================
+
+.hamburger {
+	position: absolute;
+	visibility: hidden;
+	bottom: -7px; /* magic num */
+	right: 0;
+	display: block;
+	width: rem-calc(28);
+	height: rem-calc(24);
+	margin: rem-calc(30);
+	z-index: 2;
+
+	@media #{$medium-up} {
+		bottom: rem-calc(4);
+	}
+}
+
+.hamburger:before,
+.hamburger:after,
+.hamburger span {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: rem-calc(4);
+	background: $dark-green;
+}
+.hamburger:before {
+	top: 0;
+}
+.hamburger:after {
+	bottom: 0;
+}
+.hamburger span {
+	top: 50%;
+	margin-top: rem-calc(-2);
+}
+
+html.mm-opening .hamburger:before,
+html.mm-opening .hamburger:after {
+	display: none;
+}
+
+//=========================================
+//
+//=========================================

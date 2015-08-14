@@ -1,0 +1,40 @@
+/*
+    TABLES.CSS
+
+    - Last updated: ^^^^^^^^
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Tables
+//-----------------------------------------------------------------
+
+/* Table displays Supporters & Sponsors */
+
+table {
+	border-top: 1px solid #D5D5D5;
+
+	tr {
+		border-bottom: 1px solid #D5D5D5;
+		td {
+			vertical-align: top;
+			word-wrap: break-word;
+			padding: rem-calc(20);
+		}
+	}
+	@media #{$medium-up} {
+		table-layout: auto;
+	}
+}
+
+table img {
+	@media #{$medium-up} {
+		max-width: none;
+	}
+}
+
+//=========================================
+//
+//=========================================

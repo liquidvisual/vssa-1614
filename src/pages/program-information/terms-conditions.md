@@ -1,5 +1,5 @@
 ---
-layout: text_page
+layout: internal/text_page
 title: Terms & Conditions
 permalink: /program-information/terms-conditions/
 hero_image: cpr

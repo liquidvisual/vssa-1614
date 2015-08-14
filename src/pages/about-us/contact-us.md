@@ -1,5 +1,5 @@
 ---
-layout: contact_us
+layout: internal/contact_us
 title: Contact Us
 permalink: /about-us/contact-us/
 hero_image: kids-carrying-surfboard

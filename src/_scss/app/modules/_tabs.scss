@@ -1,0 +1,96 @@
+/*
+    TABS.CSS
+
+    - Last updated: ^^^^^^^^
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Tabs
+//-----------------------------------------------------------------
+
+.tabs {
+	position: relative;
+	margin-bottom: rem-calc(15) !important;
+	// border-bottom: 1px solid #C4C4C4;
+	overflow: hidden;
+
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 1px;
+		width: 100%;
+		background: #C4C4C4;
+	}
+
+	@media #{$small-only} {
+		display: table;
+		width: 100%;
+	}
+}
+
+.tabs dd {
+	@media #{$small-only} {
+		position: relative;
+		top: -1px;
+		display: table-cell;
+		float: none;
+		text-align: center;
+	}
+}
+
+.tabs dd.active {
+	@media #{$small-only} {
+		top: 0;
+	}
+}
+
+.tabs dd {
+	z-index: 1;
+}
+
+.tabs dd.active .text {
+	position: relative;
+	top: -1px;
+}
+
+.tabs .list-view.active {
+	border: 1px solid #C4C4C4;
+	border-bottom: 0;
+
+}
+
+.tabs .map-view.active {
+	border: 1px solid #C4C4C4;
+	border-bottom: 0;
+	// position: relative;
+	// top: 0px;
+
+}
+
+.tabs dd a {
+	padding-left: rem-calc(25);
+	padding-right: rem-calc(80);
+
+	@media #{$small-only} {
+		padding-left: rem-calc(10);
+		padding-right: rem-calc(10);
+	}
+}
+
+/* What gives, Webkit?! */
+.lv-super .accordion,
+.lv-super .accordion *,
+.lv-super .accordion a,
+.lv-super .tabs-content .content,
+.lv-super .tabs a {
+    outline: none !important;
+}
+
+//=========================================
+//
+//=========================================

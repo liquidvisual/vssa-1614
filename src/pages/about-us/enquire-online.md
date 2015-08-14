@@ -1,5 +1,5 @@
 ---
-layout: enquire_online
+layout: internal/enquire_online
 title: Enquire Online
 permalink: /about-us/enquire-online/
 hero_image: kids-carrying-surfboard

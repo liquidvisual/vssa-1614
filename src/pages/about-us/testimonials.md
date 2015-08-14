@@ -1,5 +1,5 @@
 ---
-layout: text_page
+layout: internal/text_page
 title: Testimonials
 permalink: /about-us/testimonials/
 hero_image: kids-carrying-surfboard

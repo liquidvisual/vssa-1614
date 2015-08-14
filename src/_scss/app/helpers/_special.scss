@@ -1,0 +1,95 @@
+/*
+    SPECIAL.CSS - Refactor Later
+
+    - Last updated: ^^^^^^^^
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Special
+//-----------------------------------------------------------------
+
+.primary-color {
+    color: $primary-color;
+}
+
+//=========================================
+//
+//=========================================
+
+/* Prevent Flickering in Webkit */
+h1, h2, h3, h4, h5, h6, p, a {
+	-webkit-transform: translateZ(0);
+	   -moz-transform: translateZ(0);
+	    -ms-transform: translateZ(0);
+	     -o-transform: translateZ(0);
+	        transform: translateZ(0);
+}
+
+/*  Ensure images scale to block grid LIs */
+ul[class*='block-grid'] li img {
+	width: 100%;
+}
+
+//-----------------------------------------------------------------
+/* Notice appears in location template */
+//-----------------------------------------------------------------
+
+.notice {
+	color: $alert-color;
+}
+
+.lv-super label {
+	margin-bottom: 0;
+}
+
+.lv-super .right-for-medium {
+	@media #{$medium-up} {
+		float: right;
+	}
+}
+
+.primary-color {
+	color: $primary-color;
+}
+
+//-----------------------------------------------------------------
+// IE8
+//-----------------------------------------------------------------
+
+.lt-ie9 .lv-page {
+	display: none;
+}
+
+//-----------------------------------------------------------------
+// Special / Misc - Refactor Later
+//-----------------------------------------------------------------
+
+.google-map {
+	border: 1px solid #DBDBDB;
+}
+
+#map img{max-width: inherit;}
+
+//-----------------------------------------------------------------
+// Added by Jono
+//-----------------------------------------------------------------
+
+.smaller {
+	font-size: 100%;
+}
+
+#login-status {
+	font-size: 85%;
+	float: right;
+	text-align: right;
+	padding: rem-calc(15 0);
+	line-height: 130%;
+}
+
+.program-operator-logo {
+	max-height: rem-calc(100);
+	max-width: rem-calc(400);
+}

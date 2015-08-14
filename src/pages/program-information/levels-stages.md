@@ -1,5 +1,5 @@
 ---
-layout: text_page
+layout: internal/text_page
 title: Levels / Stages
 permalink: /program-information/levels-stages/
 hero_image: cpr

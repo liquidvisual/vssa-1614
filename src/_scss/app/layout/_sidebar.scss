@@ -1,0 +1,39 @@
+/*
+    SIDEBAR.CSS
+
+    - Last updated: ^^^^^^^^
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Sidebar
+//-----------------------------------------------------------------
+
+.sidebar {
+	margin-bottom: rem-calc(50);
+}
+
+.sidebar .advertisements {
+	color: #bbb;
+}
+
+.side-nav a {
+	// @extend .transition;
+	@include transition();
+	background: #E9E7E7;
+}
+
+.side-nav .nested a {
+	background: #F3F3F3;
+}
+
+.side-nav li.active a {
+	background: #D8D7D7;
+	font-weight: bold !important; /* F5 doesn't have access to BG?? */
+}
+
+//=========================================
+//
+//=========================================

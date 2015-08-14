@@ -1,5 +1,5 @@
 ---
-layout: text_page
+layout: internal/text_page
 title: Program Information
 permalink: /program-information/
 hero_image: cpr

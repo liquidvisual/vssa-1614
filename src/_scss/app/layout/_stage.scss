@@ -1,0 +1,54 @@
+/*
+    STAGE.CSS
+
+    - Last updated: ^^^^^^^^
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Stage
+//-----------------------------------------------------------------
+
+.homepage,
+.internal {
+	padding-top: $header-height-tiny + $vertical-spacing;
+
+	@media #{$medium-up} {
+	    padding-top: $header-height-medium + $vertical-spacing;
+	}
+
+	@media #{$large-up} {
+	    padding-top: 0;
+	}
+}
+
+.internal {
+	@media #{$large-up} {
+		padding-top: $header-height-medium + $vertical-spacing;
+	}
+}
+
+//-----------------------------------------------------------------
+// Content
+//-----------------------------------------------------------------
+
+.homepage .main {
+	padding: rem-calc(40 0);
+	background: #0E363C;
+
+	@media #{$large-up} {
+		padding: rem-calc(20 0);
+		background: rgba($dark-green, .8);
+		margin-bottom: rem-calc(45);
+	}
+}
+
+.internal .main {
+	margin-bottom: rem-calc(50);
+}
+
+//=========================================
+//
+//=========================================

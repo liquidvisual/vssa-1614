@@ -1,5 +1,5 @@
 ---
-layout: text_page
+layout: internal/text_page
 title: About Us
 permalink: /about-us/
 hero_image: kids-carrying-surfboard

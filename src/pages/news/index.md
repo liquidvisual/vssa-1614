@@ -1,5 +1,5 @@
 ---
-layout: news
+layout: internal/news
 title: News
 permalink: /news/
 hero_image: "beach-games"

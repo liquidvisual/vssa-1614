@@ -1,5 +1,5 @@
 ---
-layout: text_page
+layout: internal/text_page
 title: Calendar Dates
 permalink: /program-information/calendar-dates/
 hero_image: cpr

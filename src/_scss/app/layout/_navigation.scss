@@ -1,0 +1,140 @@
+/*
+    NAVIGATION.CSS
+
+    - Last updated: ^^^^^^^^
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Navigation
+//-----------------------------------------------------------------
+
+.navigation {
+	position: absolute;
+	top: auto;
+	width: 100%;
+	background: rgba($dark-green, .8);
+	z-index: 1;
+}
+
+.topbar ul {
+	margin-bottom: 0;
+	font-size: rem-calc(13);
+}
+
+.topbar li {
+	display: inline-block;
+	float: left;
+}
+
+.topbar a {
+	// @extend .transition;
+	@include transition();
+	display: block;
+	padding: rem-calc(10 15);
+	margin: rem-calc(10 0);
+	color: white;
+	font-weight: 500;
+	font-smoothing: none;
+}
+
+.topbar a:active,
+.topbar .active > a {
+	background: $dark-green;
+}
+
+.no-touch .topbar a:hover {
+	background: #3B6871;
+}
+
+//=========================================
+// Nested Dropdowns
+//=========================================
+
+.topbar .has-dropdown:hover > a {
+	background: #3B6871;
+}
+
+/* UX decision, dropdowns are fiddly on tablets */
+.no-touch .topbar .has-dropdown:hover > .dropdown {
+	opacity: 1;
+	height: auto;
+	overflow: visible;
+}
+
+.no-touch .topbar .dropdown .has-dropdown:hover > .dropdown {
+	opacity: 1;
+	height: auto;
+}
+
+.topbar .dropdown {
+	// @extend .transition;
+	@include transition();
+	position: absolute;
+	opacity: 0;
+	height: 0; // so hit areas aren't triggered
+	overflow: hidden; // so hit areas aren't triggered
+	top: 50px;
+	left: auto;
+	width: rem-calc(300);
+	background: #3B6871;
+	margin: 0;
+}
+
+/* Third level nesting */
+.topbar .dropdown .dropdown {
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+
+.topbar .dropdown li {
+	position: relative;
+	float: none;
+	display: block;
+}
+
+.topbar .dropdown a {
+	border-bottom: 1px solid rgba(255,255,255,.1);
+	margin: 0;
+}
+
+.topbar .dropdown li:last-child a {
+	border-bottom: 0;
+}
+
+.topbar .dropdown a:hover {
+	background: #4A757E;
+}
+
+//-----------------------------------------------------------------
+// Off Canvas Menu
+//-----------------------------------------------------------------
+
+.navigation .facebook {
+	display: none;
+}
+
+#off-canvas-menu .facebook {
+	i {
+		font-size: rem-calc(20);
+		line-height: 40px;
+	}
+
+	span {
+		display: inline-block;
+		width: 40px;
+		background: #0F363C;
+		text-align: center;
+	}
+
+	&:after {
+		border: 0;
+	}
+}
+
+//=========================================
+//
+//=========================================

@@ -1,5 +1,5 @@
 ---
-layout: news_item
+layout: internal/news_item
 title:  "What's the Deal with Airline Peanuts?"
 permalink: /news/whats-the-deal-with-airline-peanuts/
 type: news_item
