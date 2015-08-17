@@ -20,13 +20,16 @@
     <!-- Google Fonts CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
 
-    <link rel="stylesheet" href="/assets/css/optimized.css"/>
+    <link rel="stylesheet" href="/assets/css/optimized.css">
 
-    <script src="/assets/scripts/priority-optimized.js"></script>
+    <!-- Priority Scripts -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="/scripts/maps.js"></script>
 
 </head>
 <body>
-    <div class="lv-super developerX">
+    <div class="lv-super dev-mode-enabledX">
         <div class="lv-page">
 
             
@@ -37,7 +40,7 @@
     <!-- HERO TOP -->
     <div class="hero-top"></div>
 
-    <div class="header-wrapper">
+    <div class="header-wrapper FixedTop">
 
         <!-- HEADER -->
         <header class="header">
@@ -353,7 +356,7 @@
 <div class="footer-bottom">
     <div class="row outer-row">
         <div class="small-4 columns text-left">
-            <p><a href="/privacy-policy/">Privacy Policy</a></p>
+            <p><a href="/privacy-policy/">Privacy Policy</a> | <a href="/sitemap/">Sitemap</a></p>
         </div>
         <div class="small-8 columns text-right">
             <p>
@@ -371,7 +374,7 @@
     </div> <!-- .lv-super -->
 
     <!-- OFF-CANVAS MENU -->
-    <nav id="off-canvas-menu" class="hide" aria-hidden="true">
+    <nav id="off-canvas-menu" aria-hidden="true">
         
 
 
@@ -538,15 +541,11 @@
 
     <script src="/assets/scripts/optimized.js"></script>
 
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script src="/scripts/maps.js"></script>
+    
 
-    <!-- Fire Foundation -->
-    <script>$(document).foundation();</script>
-
-    <script type="text/javascript">
-
-  </script>
+    <script>
+        $(document).foundation();
+    </script>
 
     <!-- Google Analytics Here -->
 

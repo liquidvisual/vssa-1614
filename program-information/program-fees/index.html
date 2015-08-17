@@ -20,13 +20,16 @@
     <!-- Google Fonts CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
 
-    <link rel="stylesheet" href="/assets/css/optimized.css"/>
+    <link rel="stylesheet" href="/assets/css/optimized.css">
 
-    <script src="/assets/scripts/priority-optimized.js"></script>
+    <!-- Priority Scripts -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="/scripts/maps.js"></script>
 
 </head>
 <body>
-    <div class="lv-super developerX">
+    <div class="lv-super dev-mode-enabledX">
         <div class="lv-page">
 
             
@@ -37,7 +40,7 @@
     <!-- HERO TOP -->
     <div class="hero-top"></div>
 
-    <div class="header-wrapper">
+    <div class="header-wrapper FixedTop">
 
         <!-- HEADER -->
         <header class="header">
@@ -264,47 +267,47 @@
 
 <p>The VACSWIM program fee consists of two parts;</p>
 
-<p><strong>Enrolment Fee:</strong> In 2015, the
+<p><strong>Enrolment Fee:</strong> In 2015, the<br />
 enrolment fee will be $30.00 per child.</p>
 
-<p>**Large family Discounts: **
-Families that have 4 or more children are entitled to a
-large family discount. The large family program fees are
-capped at $100.00 (excluding SLSSA ‘Surf &amp; Survive’ Level
+<p>**Large family Discounts: **<br />
+Families that have 4 or more children are entitled to a<br />
+large family discount. The large family program fees are<br />
+capped at $100.00 (excluding SLSSA ‘Surf &amp; Survive’ Level<br />
 10).</p>
 
-<p><strong>GST:</strong> the VACSWIM Program is GST
+<p><strong>GST:</strong> the VACSWIM Program is GST<br />
 free.</p>
 
-<p><strong>Equipment &amp; Location Fee:</strong> In
-addition to the enrolment fee, some locations charge an Equipment
-&amp; Location Fee to assist with the costs associated with
-provisions of equipment, first aid, etc. Concessions or large
-family discounts do not apply to this fee. This fee is GST
+<p><strong>Equipment &amp; Location Fee:</strong> In<br />
+addition to the enrolment fee, some locations charge an Equipment<br />
+&amp; Location Fee to assist with the costs associated with<br />
+provisions of equipment, first aid, etc. Concessions or large<br />
+family discounts do not apply to this fee. This fee is GST<br />
 exempt.</p>
 
 <h2 id="pool-entry-fees">Pool Entry Fees</h2>
 
-<p>In addition to the program fees mentioned above,
-some locations charge a daily entry fee which is <strong>paid
-direct to the pool/venue</strong> during the program (do not pay
+<p>In addition to the program fees mentioned above,<br />
+some locations charge a daily entry fee which is <strong>paid<br />
+direct to the pool/venue</strong> during the program (do not pay<br />
 this fee to VACSWIM when enrolling your child).</p>
 
-<p><em>PLEASE NOTE: Some sites waive the daily entry
-fee for pool members. To enquire about pool memberships and/or
-season passes, please contact your local pool, lake or
+<p><em>PLEASE NOTE: Some sites waive the daily entry<br />
+fee for pool members. To enquire about pool memberships and/or<br />
+season passes, please contact your local pool, lake or<br />
 school.</em></p>
 
 <h2 id="slssa-surf--survive-level-10">SLSSA ‘Surf &amp; Survive’ Level 10</h2>
 
-<p>Children participating in the SLSSA ‘Surf
-&amp; Survive’ Level 10 will <strong>incur an additional
-cost</strong> for program manuals which must be given to
-the Instructor in Charge at the location. Payments can be made by
+<p>Children participating in the SLSSA ‘Surf<br />
+&amp; Survive’ Level 10 will <strong>incur an additional<br />
+cost</strong> for program manuals which must be given to<br />
+the Instructor in Charge at the location. Payments can be made by<br />
 cash, money order or cheque (cheques must be payable to SLSSA).</p>
 
-<p><em><strong>SA Water VACSWIM - childrens swimming
-lessons, water safety &amp; water survival skills - at your local
+<p><em><strong>SA Water VACSWIM - childrens swimming<br />
+lessons, water safety &amp; water survival skills - at your local<br />
 swimming pool, leisure centre or beach!</strong></em></p>
 
     </main>
@@ -462,7 +465,7 @@ swimming pool, leisure centre or beach!</strong></em></p>
 <div class="footer-bottom">
     <div class="row outer-row">
         <div class="small-4 columns text-left">
-            <p><a href="/privacy-policy/">Privacy Policy</a></p>
+            <p><a href="/privacy-policy/">Privacy Policy</a> | <a href="/sitemap/">Sitemap</a></p>
         </div>
         <div class="small-8 columns text-right">
             <p>
@@ -480,7 +483,7 @@ swimming pool, leisure centre or beach!</strong></em></p>
     </div> <!-- .lv-super -->
 
     <!-- OFF-CANVAS MENU -->
-    <nav id="off-canvas-menu" class="hide" aria-hidden="true">
+    <nav id="off-canvas-menu" aria-hidden="true">
         
 
 
@@ -647,15 +650,11 @@ swimming pool, leisure centre or beach!</strong></em></p>
 
     <script src="/assets/scripts/optimized.js"></script>
 
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script src="/scripts/maps.js"></script>
+    
 
-    <!-- Fire Foundation -->
-    <script>$(document).foundation();</script>
-
-    <script type="text/javascript">
-
-  </script>
+    <script>
+        $(document).foundation();
+    </script>
 
     <!-- Google Analytics Here -->
 
