@@ -22,7 +22,8 @@
 	&.is-fixed {
 		position: fixed;
 		top: -20px;
-		border-bottom: 1px solid #eee;
+		// border-bottom: 1px solid #eee;
+		box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.2);
 
 		@media #{$large-up} {
 		    border-top: 0;
@@ -53,9 +54,9 @@
 	}
 }
 
-//=========================================
+//-----------------------------------------------------------------
 // Logo
-//=========================================
+//-----------------------------------------------------------------
 
 .header .logo {
 	position: relative;
