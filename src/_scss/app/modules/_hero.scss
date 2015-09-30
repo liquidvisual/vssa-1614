@@ -16,7 +16,7 @@
 .hero-bottom {
 	background-repeat: no-repeat;
     background-position: center top;
-    background-color: #AFC3C1;
+    // background-color: #AFC3C1;
     overflow: hidden;
 
     -webkit-background-size: cover;
@@ -44,45 +44,98 @@
 	top: 0;
 	width: 100%;
 	height: 1rem;
-	background: rgba($dark-green, .5);
+	background: rgba($primary-color, .8);
 }
 
-//=========================================
+//-----------------------------------------------------------------
 // Hero Homepage
-//=========================================
+//-----------------------------------------------------------------
 
 .homepage .hero {
 	padding-top: $vertical-spacing;
-	background-image: url(../img/template/homepage-hero.jpg);
+	background-image: url(../img/template/homepage-hero-summer.jpg);
+	background-repeat: no-repeat;
 	background-size: 1200px;
-	background-position: 90% top;
+	background-position: 100% 0;
+
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+		 -o-background-size: cover;
+			background-size: cover;
 
 	@media #{$medium-up} {
-		background-position: 70% -50px;
+		// background-position: 70% -50px;
+		background-position: 60% 0;
 	}
 
 	@media #{$large-up} {
 		padding-top: $header-height-medium + $navigation-height + ($vertical-spacing * 2);
-		background-position: top center;
-
-		-webkit-background-size: cover;
-		   -moz-background-size: cover;
-			 -o-background-size: cover;
-				background-size: cover;
+		// background-position: top center;
+		background-position: 40% top;
 	}
 }
+
+//-----------------------------------------------------------------
+// Hero Caption
+//-----------------------------------------------------------------
+
+.homepage .hero-caption {
+	padding: rem-calc(20 0);
+}
+
+//-----------------------------------------------------------------
+// H1
+//-----------------------------------------------------------------
 
 .homepage .hero h1 {
-	font-size: rem-calc(25);
+	font-size: rem-calc(35);
 	font-weight: 300;
-	color: white;
-	line-height: 1.2;
-	margin-bottom: $vertical-spacing;
+	line-height: 1;
 
-	@media #{$large-up} {
-		font-size: rem-calc(29);
+	@media #{$medium-up} {
+		font-size: rem-calc(55);
+	}
+
+	// "Confidence"
+	.bold-hero-text {
+		display: block;
+		font-size: rem-calc(40);
+		font-weight: bold;
+		color: $quaternary-color;
+
+		@media #{$medium-up} {
+		    font-size: rem-calc(65);
+		}
 	}
 }
+
+//=========================================
+// H2 (date)
+//=========================================
+
+.homepage .hero-caption h2 {
+	font-size: rem-calc(24);
+	font-weight: bold;
+	margin-bottom: rem-calc(30);
+
+	@media #{$medium-up} {
+	    font-size: rem-calc(30);
+	}
+}
+
+//=========================================
+// Paragraph
+//=========================================
+
+.homepage .hero-caption p {
+	font-size: rem-calc(22);
+	color: $primary-color;
+	line-height: 1.2;
+}
+
+//=========================================
+// Button
+//=========================================
 
 .homepage .hero .button {
 	// @extend .transition;
@@ -164,10 +217,10 @@ $backgrounds: kids-carrying-surfboard, instructors, cpr, kids-in-pool, beach-gam
 	bottom: 0;
 	width: 100%;
 	padding: rem-calc(15 0 0 0);
-	background: #0E363C;
+	background: $primary-color;
 
 	@media #{$large-up} {
-		background: rgba($dark-green, .5);
+		background: rgba($primary-color, .8);
 		padding: rem-calc(10 0);
 	}
 }

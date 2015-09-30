@@ -22,3 +22,11 @@ twitter: "https://twitter.com/VACSWIMSA"
 
 # Google Map
 google_map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.9024253121343!2d138.556808!3d-34.85867899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0c7d5d7491855%3A0x1f39f313804cfc3e!2sThe+Parks+Recreation+and+Sports+Centre!5e0!3m2!1sen!2sus!4v1410828227925"
+
+# Breakpoints
+breakpoints:
+  small  : 640
+  medium : 768
+  large  : 1024
+  xlarge : 1200
+  xxlarge: 1440

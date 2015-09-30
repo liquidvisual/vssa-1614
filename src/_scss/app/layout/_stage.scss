@@ -35,13 +35,30 @@
 //-----------------------------------------------------------------
 
 .homepage .main {
-	padding: rem-calc(40 0);
-	background: #0E363C;
+	padding: rem-calc(50 0);
+	background: $primary-color;
 
 	@media #{$large-up} {
-		padding: rem-calc(20 0);
-		background: rgba($dark-green, .8);
+	    padding: rem-calc(40 0);
+	}
+
+	@media #{$large-up} {
+		background: rgba($primary-color, .8);
 		margin-bottom: rem-calc(45);
+	}
+
+	p {
+		color: white;
+		margin: 0;
+	}
+
+	a {
+		@include transition();
+		color: #09D6E1;
+
+		&:hover {
+			color: darken(#09D6E1, 5%);
+		}
 	}
 }
 

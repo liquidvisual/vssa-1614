@@ -12,17 +12,123 @@
 //-----------------------------------------------------------------
 
 .footer {
+
+	a {
+		color: $tertiary-color;
+
+		&:hover {
+			color: darken($tertiary-color, 10%);
+		}
+	}
+
+	//=========================================
+	// Footer Body
+	//=========================================
+
 	.footer-body {
 	    padding: rem-calc(40 0 30 0);
 	    background: white;
+	    color: $tertiary-color;
+
+	    img {
+			vertical-align: bottom;
+	    }
 
 	    h3 {
-			color: #5d7679;
-			border-bottom: 1px solid #E0E0E0;
+	    	font-weight: bold;
 			padding-bottom: rem-calc(10);
 			margin-bottom: rem-calc(10);
 		}
+
+		h3.underline {
+			border-bottom: 1px solid $tertiary-color;
+		}
 	}
+
+	//=========================================
+	// Footer Body Spacer
+	//=========================================
+
+	.footer-body-spacer {
+		margin-bottom: rem-calc(30);
+	}
+
+	//=========================================
+	// Footer Body Sponsors
+	//=========================================
+
+	.footer-body-sponsors {
+		// background: aqua;
+
+		@media #{$xlarge-up} {
+		    padding-left: rem-calc(150);
+		}
+
+		.sp-1,
+		.sp-2,
+		.sp-3,
+		.sp-4,
+		.sp-5 {
+			display: inline-block;
+		}
+
+		.sp-1 img,
+		.sp-2 img,
+		.sp-3 img,
+		.sp-4 img,
+		.sp-5 img {
+			position: relative;
+		}
+
+		.sp-1 img {
+			width: rem-calc(260);
+		}
+
+		//========================
+		.sp-2 img {
+			width: rem-calc(50);
+
+			@media #{$medium-up} {
+			    width: rem-calc(30);
+			}
+
+			@media #{$large-up} {
+			    width: rem-calc(50);
+			}
+		}
+		.sp-3 img {
+			width: rem-calc(120);
+
+			@media #{$medium-up} {
+			    width: rem-calc(80);
+			}
+
+			@media #{$large-up} {
+			    width: rem-calc(100);
+			}
+		}
+		.sp-4 img {
+			top: 12px;
+			width: rem-calc(50);
+
+			@media #{$medium-up} {
+			    width: rem-calc(30);
+			}
+
+			@media #{$large-up} {
+			    width: rem-calc(50);
+			}
+		}
+		//========================
+
+		.sp-5 img {
+			width: rem-calc(90);
+		}
+	}
+
+	//=========================================
+	// Footer Bottom
+	//=========================================
 
 	.footer-bottom {
 		background: $silk;
@@ -32,34 +138,34 @@
 			margin-bottom: 0;
 			font-size: rem-calc(12);
 		}
+
 		a {
-			color: #444;
+			color: lighten($body-font-color, 10%);
+
+			&:hover {
+				color: $body-font-color;
+			}
 		}
 	}
 
 	@media #{$large-up} {
-		box-shadow: 0 -4px 4px -2px rgba(0, 0, 0, 0.2);
+		// box-shadow: 0 -4px 4px -2px rgba(0, 0, 0, 0.2);
 		z-index: 1;
 	}
 }
 
 //=========================================
-//
+// Author Logo
 //=========================================
 
 .footer .author-logo {
+	display: inline-block;
 	color: #b3b2b2;
 
 	.text {
 		position: relative;
-		top: rem-calc(2);
 		display: inline-block;
+		top: rem-calc(2);
 		margin-right: rem-calc(5);
 	}
-}
-
-.no-touch .footer .author-logo:hover {
-	// @extend .transition;
-	@include transition();
-	color: darken(#b3b2b2, 10%);
 }

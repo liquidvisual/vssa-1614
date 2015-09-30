@@ -20,32 +20,49 @@
 	margin-right: rem-calc(5);
 }
 
+.social-networks li a,
 .social-networks a {
-	// @extend .transition;
 	@include transition();
 	width: 33px;
 	height: 33px;
 	text-align: center;
-	color: white;
-	font-size: rem-calc(23);
+	color: white !important;
+	font-size: rem-calc(20); //rem-calc(23);
 	line-height: 36px;
-	display: block;
-}
-
-.social-networks .facebook a {
-	background: #375493;
+	display: inline-block;
+	background: $tertiary-color;
+	border-radius: 100%;
 
 	&:hover {
-		background: darken(#375493, 10%);
+		@media #{$large-up} {
+		    background: darken($primary-color, 5%);
+		}
 	}
 }
 
-.social-networks .twitter a {
-	background: #56CBFE;
+// .social-networks .facebook a {
+// 	background: #375493;
 
-	&:hover {
-		background: darken(#56CBFE, 10%);
-	}
+// 	&:hover {
+// 		background: darken(#375493, 10%);
+// 	}
+// }
+
+// .social-networks .twitter a {
+// 	background: #56CBFE;
+
+// 	&:hover {
+// 		// background: darken(#56CBFE, 10%);
+// 	}
+// }
+
+//-----------------------------------------------------------------
+// Context
+//-----------------------------------------------------------------
+
+.header .social-networks {
+	position: relative;
+	top: 70px;
 }
 
 //-----------------------------------------------------------------

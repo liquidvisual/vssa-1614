@@ -1,11 +1,40 @@
-{% comment %} LOTS OF HARDCODING AHEAD {% endcomment %}
-
 {% assign settings = site.data.settings %}
 
 <div class="footer-body">
     <div class="row outer-row">
         <div class="medium-8 medium-push-4 large-9 large-push-3 columns">
 
+            <!-- SPONSORS -->
+            <div class="footer-body-sponsors text-center medium-text-left">
+                <div class="row">
+
+                    <!-- First -->
+                    <div class="columns medium-4 large-5">
+                        <h3>Naming rights partner</h3>
+                        <a target="_blank" class="sp-1" href="https://www.sawater.com.au/"><img src="/img/template/sa-water-logo.png" alt="Funded by Government of SA"></a>
+                        <div class="footer-body-spacer hide-for-medium-up"></div>
+                    </div>
+
+                    <!-- Second -->
+                    <div class="columns medium-5 large-5">
+                        <h3>Program providers</h3>
+                        <a target="_blank" class="sp-2" href="http://surfrescue.com.au/"><img src="/img/template/slssa-logo-mark.png" alt="Surf Life Saving South Australia"></a>
+                        <a target="_blank" class="sp-3" href="http://www.royallifesavingsa.com.au/"><img src="/img/template/rlssa-logo.png" alt="Royal Life Saving"></a>
+                        <a target="_blank" class="sp-4" href="http://www.sa.ymca.org.au/"><img src="/img/template/ymca-logo-3.png" alt="YMCA"></a>
+                        <div class="footer-body-spacer hide-for-medium-up"></div>
+                    </div>
+
+                    <!-- Third -->
+                    <div class="columns medium-3 large-2">
+                        <h3>Funded by</h3>
+                        <a target="_blank" class="sp-5" href="https://www.recsport.sa.gov.au/"><img src="/img/template/ocrs-logo.png" alt="Rec Sport SA"></a>
+                        <div class="footer-body-spacer hide-for-medium-up"></div>
+                    </div>
+
+                </div> <!-- .row -->
+            </div> <!-- .footer-body-sponsors -->
+
+            {% comment %}
             <!-- Image Map - Hardcoded - Yehaw -->
             <div class="show-for-large-up" aria-hidden="true">
                 <img id="Image-Maps-Com-image-maps-2014-09-29-012554" src="{{ "/img/template/sponsor-logos-all.png" | prepend: site.assets }}" border="0" width="728" height="114" orgWidth="728" orgHeight="114" usemap="#image-maps-2014-09-29-012554" alt="" />
@@ -38,18 +67,19 @@
                 <li><a target="_blank" href="http://www.sa.ymca.org.au/"><span class="img"><img src="{{ "/img/template/sp-8.png" | prepend: site.assets }}" alt="YMCA"></span></a></li>
                 <li><a target="_blank" href="https://www.recsport.sa.gov.au/"><span class="img"><img src="{{ "/img/template/sp-9.png" | prepend: site.assets }}" alt="Rec Sport SA"></span></a></li>
             </ul>
+            {% endcomment %}
 
         </div> <!-- .columns -->
         <div class="medium-4 medium-pull-8 large-3 large-pull-9 columns">
-            <h3>SA Water VACSWIM</h3>
+            <h3 class="underline">SA Water VACSWIM</h3>
             <p>
-                <strong>Ph:</strong> {{ settings.phone }} <br>
-                <strong>Fax:</strong> {{ settings.fax }} <br>
-                <strong>Email:</strong> <a href="mailto:{{ settings.email }}">{{ settings.email }}</a>
+                <strong>P</strong> <a href="mailto:{{ settings.phone }}">{{ settings.phone }}</a> <br>
+                <strong>F</strong> <a href="mailto:{{ settings.fax }}">{{ settings.fax }}</a> <br>
+                <!-- <strong>Email:</strong> <a href="mailto:{{ settings.email }}">{{ settings.email }}</a> -->
             </p>
             <ul class="social-networks">
-                <li class="facebook"><a href="{{ settings.facebook }}"><span><i class="icon-facebook"></i></span></a></li>
-                <li class="twitter"><a href="{{ settings.twitter }}"><span><i class="icon-twitter"></i></span></a></li>
+                <li class="facebook"><a href="{{ settings.facebook }}" target="_blank"><span><i class="icon-facebook"></i></span></a></li>
+                <li class="twitter"><a href="{{ settings.twitter }}" target="_blank"><span><i class="icon-twitter"></i></span></a></li>
             </ul> <!-- .social-networks -->
         </div> <!-- .columns -->
     </div> <!-- .row -->
@@ -57,10 +87,10 @@
 
 <div class="footer-bottom">
     <div class="row outer-row">
-        <div class="small-4 columns text-left">
+        <div class="small-5 columns text-left">
             <p><a href="/privacy-policy/">Privacy Policy</a> | <a href="/sitemap/">Sitemap</a></p>
         </div>
-        <div class="small-8 columns text-right">
+        <div class="small-7 columns text-right">
             <p>
             <a class="author-logo" href="http://www.muchmedia.com.au">
                 <span class="text">Website by Much Media</span>

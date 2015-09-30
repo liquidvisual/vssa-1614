@@ -12,7 +12,7 @@ $(window).scroll(function(){
 	var scrollTop = $(this).scrollTop();
 
 	// Add bottom-border to Mobile header when scrolling
-	if (scrollTop > 20) {
+	if (scrollTop >= 20) {
 		$('.header-wrapper').addClass('is-fixed');
 		$('.lv-super').addClass('header-is-fixed');
 	} else {

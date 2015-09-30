@@ -5,6 +5,4 @@ permalink: /vacswim-locations/
 hero_image: kids-carrying-surfboard
 ---
 
-## Learn important swimming, water safety & water survival skills. To enrol, first choose your location below.
-
-The links below provide specific information relating to each VACSWIM site as well as a direct link for online enrolments. To visit your favourite VACSWIM site, simply click on the tabs below to expand the selection.
+## There are over 130 locations that will be providing SA Water VACSWIM programs.  To discover which beaches and pools are involved, simply click through the regions below.  Enrolments for SA Water VACSWIM 2016 will open on Thursday 1st October from 9am.

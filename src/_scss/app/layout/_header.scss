@@ -16,14 +16,19 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	border-top: $vertical-spacing solid #37585D;
+	border-top: $vertical-spacing solid $primary-color; //#37585D;
 	z-index: 10;
+
+	// fixes iOS9 repaint bug
+	// http://stackoverflow.com/questions/9807620/ipad-safari-scrolling-causes-html-elements-to-disappear-and-reappear-with-a-dela
+	-webkit-transform: translate3d(0,0,0);
 
 	&.is-fixed {
 		position: fixed;
 		top: -20px;
 		// border-bottom: 1px solid #eee;
 		box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.2);
+
 
 		@media #{$large-up} {
 		    border-top: 0;
@@ -50,7 +55,7 @@
 	}
 
 	@media #{$large-up} {
-		box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.4);
+		// box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.4);
 	}
 }
 
@@ -60,21 +65,23 @@
 
 .header .logo {
 	position: relative;
-	top: rem-calc(12);
+	top: rem-calc(15);
 
 	@media #{$medium-up} {
 	    top: rem-calc(20);
 	}
 
 	img {
-		width: rem-calc(120); //rem-calc(175);
+		width: rem-calc(145); //rem-calc(175);
 
 		@media #{$medium-up} {
-			width: rem-calc(210);
+			// width: rem-calc(210);
+			width: rem-calc(300);
 		}
 
 		@media #{$large-up} {
-			width: rem-calc(268);
+			// width: rem-calc(268);
+			width: rem-calc(340);
 		}
 	}
 
@@ -83,18 +90,40 @@
 	}
 
 	@media #{$large-up} {
-		top: rem-calc(15);
+		top: rem-calc(20);
 	}
 }
+
+//-----------------------------------------------------------------
+// Tagline
+//-----------------------------------------------------------------
+
+.header-tagline {
+	position: relative;
+	top: 49px;
+	font-size: rem-calc(25);
+	line-height: 1;
+
+	.header-tagline-bold-text {
+		display: block;
+		font-size: rem-calc(30);
+		font-weight: bold;
+		color: $quaternary-color;
+	}
+}
+
+//=========================================
+// Affiliate Logo (old)
+//=========================================
 
 .header .affiliate-logo {
 	position: relative;
 	top: rem-calc(26);
 }
 
-//=========================================
+//-----------------------------------------------------------------
 // Hamburger
-//=========================================
+//-----------------------------------------------------------------
 
 .hamburger {
 	position: absolute;

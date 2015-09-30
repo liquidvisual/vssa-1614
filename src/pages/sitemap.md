@@ -2,8 +2,9 @@
 layout: internal/text_page
 title: Sitemap
 permalink: /sitemap/
-hero_image: /img/content/heroes/hero-1.jpg
 ---
+
+{% assign breakpoints = site.data.settings.breakpoints %}
 
 <h2>All Available Pages for {{ site.data.settings.title }}</h2>
 
@@ -18,23 +19,23 @@ hero_image: /img/content/heroes/hero-1.jpg
 <table style="width: 300px;">
 	<tr>
 		<td>Small</td>
-		<td>640</td>
+		<td>{{ breakpoints.small }}</td>
 	</tr>
 	<tr>
 		<td>Medium</td>
-		<td>768</td>
+		<td>{{ breakpoints.medium }}</td>
 	</tr>
 	<tr>
 		<td>Large</td>
-		<td>980</td>
+		<td>{{ breakpoints.large }}</td>
 	</tr>
 	<tr>
 		<td>xLarge</td>
-		<td>-</td>
+		<td>{{ breakpoints.xlarge }}</td>
 	</tr>
 	<tr>
 		<td>xxLarge</td>
-		<td>-</td>
+		<td>{{ breakpoints.xxlarge }}</td>
 	</tr>
 </table>
 

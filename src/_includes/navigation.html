@@ -3,7 +3,7 @@
 {% endcomment %}
 
 {% assign settings = site.data.settings %}
-{% assign navigation = site.data.navigation %}
+{% assign navigation = site.data.sitemap %}
 
 <ul>
     {% comment %} Important: leave 'Home' out of the loop {% endcomment %}
@@ -36,7 +36,16 @@
     </li>
     {% endfor %}
 
-    {% comment %} Hardcoded Extras {% endcomment %}
+    <!-- Social Networks -->
+    <li class="mm-nolist mm-subtitle hide-for-large-up">
+        <span class="social-networks">
+            <a href="{{ settings.facebook }}" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+            <a href="{{ settings.twitter }}" target="_blank"><i class="fa fa-twitter"></i></a>
+        </span>
+    </li>
+
+    {% comment %} Hardcoded Extras
     <li class="right-for-medium"><a href="/login/"><i class="icon-lock"></i>&nbsp; Operator Resources</a></li>
     <li class="facebook"><a href="{{ settings.facebook }}"><span><i class="icon-facebook"></i></span></a></li>
+    {% endcomment %}
 </ul>
