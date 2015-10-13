@@ -61,14 +61,16 @@
 		// background: aqua;
 
 		@media #{$xlarge-up} {
-		    padding-left: rem-calc(150);
+		    padding-left: rem-calc(120);
 		}
 
 		.sp-1,
 		.sp-2,
 		.sp-3,
 		.sp-4,
-		.sp-5 {
+		.sp-5,
+		.sp-6,
+		.sp-7 {
 			display: inline-block;
 		}
 
@@ -76,52 +78,95 @@
 		.sp-2 img,
 		.sp-3 img,
 		.sp-4 img,
-		.sp-5 img {
+		.sp-5 img,
+		.sp-6 img,
+		.sp-7 img {
 			position: relative;
 		}
 
 		.sp-1 img {
 			width: rem-calc(260);
+
+			@media #{$medium-up} {
+			    top: 5px;
+			    width: 100%;
+			}
+
+			@media #{$large-up} {
+			    top: 12px;
+			}
+		}
+		//========================
+
+		.sp-2 img {
+			width: rem-calc(80);
+
+			@media #{$medium-up} {
+				top: 17px;
+			    width: rem-calc(60);
+			}
+
+			@media #{$large-up} {
+			    width: rem-calc(60);
+			}
+		}
+		.sp-3 img {
+			width: rem-calc(80);
+
+			@media #{$medium-up} {
+				top: 17px;
+			    width: rem-calc(60);
+			}
+
+			@media #{$large-up} {
+			    width: rem-calc(60);
+			}
 		}
 
 		//========================
-		.sp-2 img {
+		.sp-4 img {
 			width: rem-calc(50);
 
 			@media #{$medium-up} {
+				top: 10px;
 			    width: rem-calc(30);
 			}
 
 			@media #{$large-up} {
 			    width: rem-calc(50);
+			    top: -12px;
 			}
 		}
-		.sp-3 img {
+		.sp-5 img {
 			width: rem-calc(120);
 
 			@media #{$medium-up} {
+				top: 10px;
 			    width: rem-calc(80);
 			}
 
 			@media #{$large-up} {
 			    width: rem-calc(100);
+			    top: -12px;
 			}
 		}
-		.sp-4 img {
-			top: 12px;
+		.sp-6 img {
+			top: 10px;
 			width: rem-calc(50);
 
 			@media #{$medium-up} {
 			    width: rem-calc(30);
+			    top: 15px;
 			}
 
 			@media #{$large-up} {
 			    width: rem-calc(50);
+			    top: 0;
 			}
 		}
 		//========================
 
-		.sp-5 img {
+		.sp-7 img {
 			width: rem-calc(90);
 		}
 	}
