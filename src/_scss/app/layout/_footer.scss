@@ -1,8 +1,8 @@
 /*
     FOOTER.CSS
 
-    - Last updated: ^^^^^^^^
-    - hello@liquidvisual.com
+    - Last updated: 14.10.15
+    - liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
@@ -12,7 +12,6 @@
 //-----------------------------------------------------------------
 
 .footer {
-
 	a {
 		color: $tertiary-color;
 
@@ -30,14 +29,10 @@
 	    background: white;
 	    color: $tertiary-color;
 
-	    img {
-			vertical-align: bottom;
-	    }
-
 	    h3 {
 	    	font-weight: bold;
 			padding-bottom: rem-calc(10);
-			margin-bottom: rem-calc(10);
+			margin-bottom: rem-calc(20);
 		}
 
 		h3.underline {
@@ -51,124 +46,6 @@
 
 	.footer-body-spacer {
 		margin-bottom: rem-calc(30);
-	}
-
-	//=========================================
-	// Footer Body Sponsors
-	//=========================================
-
-	.footer-body-sponsors {
-		// background: aqua;
-
-		@media #{$xlarge-up} {
-		    padding-left: rem-calc(120);
-		}
-
-		.sp-1,
-		.sp-2,
-		.sp-3,
-		.sp-4,
-		.sp-5,
-		.sp-6,
-		.sp-7 {
-			display: inline-block;
-		}
-
-		.sp-1 img,
-		.sp-2 img,
-		.sp-3 img,
-		.sp-4 img,
-		.sp-5 img,
-		.sp-6 img,
-		.sp-7 img {
-			position: relative;
-		}
-
-		.sp-1 img {
-			width: rem-calc(260);
-
-			@media #{$medium-up} {
-			    top: 5px;
-			    width: 100%;
-			}
-
-			@media #{$large-up} {
-			    top: 12px;
-			}
-		}
-		//========================
-
-		.sp-2 img {
-			width: rem-calc(80);
-
-			@media #{$medium-up} {
-				top: 17px;
-			    width: rem-calc(60);
-			}
-
-			@media #{$large-up} {
-			    width: rem-calc(60);
-			}
-		}
-		.sp-3 img {
-			width: rem-calc(80);
-
-			@media #{$medium-up} {
-				top: 17px;
-			    width: rem-calc(60);
-			}
-
-			@media #{$large-up} {
-			    width: rem-calc(60);
-			}
-		}
-
-		//========================
-		.sp-4 img {
-			width: rem-calc(50);
-
-			@media #{$medium-up} {
-				top: 10px;
-			    width: rem-calc(30);
-			}
-
-			@media #{$large-up} {
-			    width: rem-calc(50);
-			    top: -12px;
-			}
-		}
-		.sp-5 img {
-			width: rem-calc(120);
-
-			@media #{$medium-up} {
-				top: 10px;
-			    width: rem-calc(80);
-			}
-
-			@media #{$large-up} {
-			    width: rem-calc(100);
-			    top: -12px;
-			}
-		}
-		.sp-6 img {
-			top: 10px;
-			width: rem-calc(50);
-
-			@media #{$medium-up} {
-			    width: rem-calc(30);
-			    top: 15px;
-			}
-
-			@media #{$large-up} {
-			    width: rem-calc(50);
-			    top: 0;
-			}
-		}
-		//========================
-
-		.sp-7 img {
-			width: rem-calc(90);
-		}
 	}
 
 	//=========================================
@@ -194,14 +71,13 @@
 	}
 
 	@media #{$large-up} {
-		// box-shadow: 0 -4px 4px -2px rgba(0, 0, 0, 0.2);
 		z-index: 1;
 	}
 }
 
-//=========================================
+//-----------------------------------------------------------------
 // Author Logo
-//=========================================
+//-----------------------------------------------------------------
 
 .footer .author-logo {
 	display: inline-block;
@@ -212,5 +88,146 @@
 		display: inline-block;
 		top: rem-calc(2);
 		margin-right: rem-calc(5);
+	}
+}
+
+//-----------------------------------------------------------------
+// Groups
+//-----------------------------------------------------------------
+
+.sponsors-group-1,
+.sponsors-group-2,
+.sponsors-group-3,
+.sponsors-group-4 {
+	img {
+		vertical-align: top;
+		padding-bottom: rem-calc(10);
+	}
+
+	@media #{$medium-up} {
+	    float: left;
+	}
+}
+
+//=========================================
+// GROUP CONTROL
+//=========================================
+
+.sponsors-group-1 {
+	padding: rem-calc(0 30);
+
+	@media #{$medium-up} {
+	    width: 35%;
+	} //=========================================
+	@media #{$xlarge-up} {
+		width: 35%;
+	}
+}
+
+.sponsors-group-2 {
+	padding: rem-calc(0 30);
+
+	@media #{$medium-up} {
+	    width: 20%;
+	} //=========================================
+	@media #{$xlarge-up} {
+		width: 25%;
+	}
+}
+
+.sponsors-group-3 {
+	@media #{$medium-up} {
+	    width: 30%;
+	} //=========================================
+	@media #{$xlarge-up} {
+		width: 30%;
+	}
+}
+
+.sponsors-group-4 {
+	@media #{$medium-up} {
+	    width: 15%;
+	} //=========================================
+	@media #{$xlarge-up} {
+		width: 10%;
+	}
+}
+
+//-----------------------------------------------------------------
+// Footer Body Sponsors
+//-----------------------------------------------------------------
+
+.footer-body-sponsors {
+	@media #{$large-up} {
+	    float: right;
+	}
+
+	// LEFT PADDING
+	@media #{$xlarge-up} {
+	    padding-left: rem-calc(50);
+	}
+}
+
+//-----------------------------------------------------------------
+// Images - Granular Control
+//-----------------------------------------------------------------
+
+.footer-body-sponsors {
+
+	.sp-1 img {
+		width: rem-calc(260);
+
+		@media #{$medium-up} {
+		    width: 100%;
+		}
+	}
+	//========================
+
+	.sp-2 img {
+		width: rem-calc(80);
+
+		@media #{$medium-up} {
+		    width: rem-calc(60);
+		}
+	}
+	.sp-3 img {
+		width: rem-calc(80);
+
+		@media #{$medium-up} {
+		    width: rem-calc(60);
+		}
+	}
+
+	//========================
+
+	.sp-4 img {
+		width: rem-calc(50);
+
+		@media #{$large-up} {
+		    width: rem-calc(50);
+		}
+	}
+	.sp-5 img {
+		width: rem-calc(120);
+
+		@media #{$large-up} {
+		    width: rem-calc(100);
+		}
+	}
+	.sp-6 img {
+		width: rem-calc(50);
+
+		@media #{$large-up} {
+		    width: rem-calc(50);
+		}
+	}
+	//========================
+
+	.sp-7 img {
+		width: rem-calc(90);
+
+		@media #{$large-up} {
+		    width: 100%;
+		}
 	}
 }
