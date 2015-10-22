@@ -200,6 +200,7 @@
     <!-- Social Networks -->
     <li class="mm-nolist mm-subtitle hide-for-large-up">
         <span class="social-networks">
+            <!-- <a href="https://twitter.com/VACSWIMSA" target="_blank"><i class="fa fa-newspaper-o"></i></a>&nbsp; -->
             <a href="https://www.facebook.com/vacswimsa" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
             <a href="https://twitter.com/VACSWIMSA" target="_blank"><i class="fa fa-twitter"></i></a>
         </span>
@@ -220,9 +221,25 @@
             <div class="row outer-row">
                 <div class="columns">
                     <div class="animated fadeInLeft">
-                        <h1>
+                        <h1 class="left">
                             Media
                         </h1>
+                        <div class="green-social-buttons">
+                            <ul class="lv-inline-list text-center">
+                                <li>
+                                    <a data-reveal-id="join-newsletter-modal" class="green-social-button" href="#">
+                                        <img width="34" src="/assets/img/template/newsletter-icon-full.svg" alt="Newsletter">
+                                        <span class="text">Newsletter</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="green-social-button" href="https://www.facebook.com/vacswimsa" target="_blank">
+                                        <img width="34" src="/assets/img/template/facebook-icon-full.svg" alt="Facebook">
+                                        <span class="text">Facebook</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> <!-- .green-social-buttons -->
                     </div>
                 </div> <!-- .columns -->
             </div> <!-- .row -->
@@ -539,6 +556,7 @@
     <!-- Social Networks -->
     <li class="mm-nolist mm-subtitle hide-for-large-up">
         <span class="social-networks">
+            <!-- <a href="https://twitter.com/VACSWIMSA" target="_blank"><i class="fa fa-newspaper-o"></i></a>&nbsp; -->
             <a href="https://www.facebook.com/vacswimsa" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
             <a href="https://twitter.com/VACSWIMSA" target="_blank"><i class="fa fa-twitter"></i></a>
         </span>
@@ -547,6 +565,70 @@
     
 </ul>
     </nav>
+
+    <!-- MODALS -->
+    
+
+
+<!-- NEWSLETTER MODAL -->
+<div id="join-newsletter-modal" class="reveal-modal" data-reveal aria-labelledby="join-newsletter-modal-modal-title" aria-hidden="true" role="dialog">
+    <div class="row">
+        <div class="columns">
+
+            <div class="modal-header">
+                <img width="590" src="/assets/img/template/newsletter-modal-header.png" alt="SA">
+                <h2 class="text-right" id="join-newsletter-modal-title"><b>2015/16 Newsletter</b></h2>
+            </div>
+
+            <section class="modal-body">
+                <div class="row">
+                    <div class="medium-10 xlarge-12 columns">
+                        <form data-abide  novalidate action="..." method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+                            <div class="row">
+
+                                <!-- First Name -->
+                                <div class="xlarge-3 columns">
+                                    <label>
+                                        <input type="text" value="" name="FNAME" class="" placeholder="First Name" id="mce-FNAME" required>
+                                    </label>
+                                    <small class="error">Your first name is required.</small>
+                                </div>
+
+                                <!-- Last Name -->
+                                <div class="xlarge-3 columns">
+                                    <label>
+                                        <input type="text" value="" name="LNAME" class="" placeholder="Last Name" id="mce-LNAME" required>
+                                    </label>
+                                    <small class="error">Your last name is required.</small>
+                                </div>
+
+                                <!-- Password -->
+                                <div class="xlarge-4 columns">
+                                    <label>
+                                        <input type="email" value="" name="EMAIL" placeholder="Email" id="mce-EMAIL" required>
+                                    </label>
+                                    <small class="error">Your email is required.</small>
+                                </div>
+
+                                <!-- Submit -->
+                                <div class="xlarge-2 columns">
+                                    <button type="submit" name="subscribe" class="button">Sign up</button>
+                                </div>
+                                <div id="mce-responses" class="clear">
+                                    <div class="response" id="mce-error-response" style="display:none"></div>
+                                    <div class="response" id="mce-success-response" style="display:none"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div> <!-- .columns -->
+                </div> <!-- .row -->
+            </section> <!-- .modal-body -->
+
+        </div> <!-- .columns -->
+    </div> <!-- .row -->
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div> <!-- reveal-modal -->
 
     <!--[if lt IE 9]>
     <div class="lv-alert lv-unselectable">
