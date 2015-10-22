@@ -1113,7 +1113,7 @@ $panel-padding: rem-calc(20);
 // $reveal-close-weight: $font-weight-bold;
 
 // We use this to set the default radius used throughout the core.
-// $reveal-radius: $global-radius;
+$reveal-radius: 0; //$global-radius;
 // $reveal-round: $global-rounded;
 
 // We use these to control the modal border

@@ -7,6 +7,7 @@
 
 $(document).ready(function() {
 	NProgress.start(); // Start preloader bar
+    $('input, textarea').placeholder(); // IE9 Patch
 });
 
 window.onload = function(){

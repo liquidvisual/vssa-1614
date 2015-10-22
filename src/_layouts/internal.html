@@ -36,9 +36,25 @@ layout: master
             <div class="row outer-row">
                 <div class="columns">
                     <div class="animated fadeInLeft">
-                        <h1>
+                        <h1 class="left">
                             {% if hero_header %}{{ hero_header }}{% else %}{{ page.title }}{% endif %}
                         </h1>
+                        <div class="green-social-buttons">
+                            <ul class="lv-inline-list text-center">
+                                <li>
+                                    <a data-reveal-id="join-newsletter-modal" class="green-social-button" href="#">
+                                        <img width="34" src="/img/template/newsletter-icon-full.svg" alt="Newsletter">
+                                        <span class="text">Newsletter</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="green-social-button" href="{{ settings.facebook }}" target="_blank">
+                                        <img width="34" src="/img/template/facebook-icon-full.svg" alt="Facebook">
+                                        <span class="text">Facebook</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> <!-- .green-social-buttons -->
                     </div>
                 </div> <!-- .columns -->
             </div> <!-- .row -->
