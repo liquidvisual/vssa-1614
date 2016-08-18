@@ -95,5 +95,14 @@ ul[class*='block-grid'] li img {
 }
 
 //-----------------------------------------------------------------
-//
+// Originally in <style> in <head> - 18.08.16
 //-----------------------------------------------------------------
+
+.header-message-mobile h3 {
+	font-size: 140%;
+}
+
+// Optional
+.google_conversion_frame {
+	display: none;
+}

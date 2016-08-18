@@ -83,10 +83,7 @@
                 <strong>F</strong> <a href="mailto:{{ settings.fax }}">{{ settings.fax }}</a> <br>
                 <!-- <strong>Email:</strong> <a href="mailto:{{ settings.email }}">{{ settings.email }}</a> -->
             </p>
-            <ul class="social-networks">
-                <li class="facebook"><a href="{{ settings.facebook }}" target="_blank"><span><i class="icon-facebook"></i></span></a></li>
-                <li class="twitter"><a href="{{ settings.twitter }}" target="_blank"><span><i class="icon-twitter"></i></span></a></li>
-            </ul> <!-- .social-networks -->
+            {% include social_networks.html %}
         </div> <!-- .columns -->
     </div> <!-- .row -->
 </div> <!-- .footer-body -->

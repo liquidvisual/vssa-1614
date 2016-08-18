@@ -29,46 +29,29 @@ banner_link: /vacswim-locations/
 
 	</div> <!-- .header-wrapper -->
 
+	<!-- HEADER TAGLINE (MOBILE) -->
+	<div class="row outer-row show-for-medium-down header-message-mobile">
+		<div class="columns">
+			<h3><i class="fa fa-exclamation-circle"></i> {{ settings.header_tagline }}</h3>
+		</div>
+	</div>
+
 	<!-- HERO -->
 	<div class="hero">
 
-	    <div class="row outer-row">
-	        <div class="medium-6 medium-offset-6 large-5 large-offset-7 columns medium-text-right collapse-left">
-	            <div class="hero-caption animated fadeInLeft">
-
-					<h1>Waterproof <span class="bold-hero-text">Confidence</span></h1>
-					<h2>4 - 12 January 2016</h2>
-					<p>SA Water VACSWIM is a government funded initiative for children aged 5 to 16 yrs to develop their skills and confidence in and around water.</p>
-
-	            	{% comment %}
-	                <h1>{{ page.banner_header }}</h1>
-	                <p><a href="{{ page.banner_link }}" class="button">
-	                	<i class="icon-child"></i>
-	                	Find your nearest VACSWIM location and book now!
-	                	<i class="icon-angle-right"></i>
-	                	</a>
-	                </p>
-	                <!--- Facebook Button -->
-	                <a href="{{ settings.facebook }}" class="facebook-button show-for-small">
-	                	<i class="icon-facebook"></i><span>Vacswim SA Facebook</span><i class="icon-angle-right"></i>
-	                </a>
-	                {% endcomment %}
-
-	            </div>
-	        </div> <!-- .columns -->
-	    </div> <!-- .row -->
+		{% include hero.html %}
 
 		<!-- MAIN -->
 		<main class="main">
 
 			<div class="row outer-row">
 				<div class="medium-7 columns">
-					<p>The main SA Water Vacswim 2016 program will kick off on Monday 4th January at beaches and pools around South Australia. Online enrolments will open on Thursday 1st October. To see if your favourite pool or beach is running on SA Water VACSWIM program check the <a href="/vacswim-locations/">Locations Page</a>.</p>
+					<p>The main SA Water Vacswim 2017 program will kick off on Tuesday 3rd January 2017 around South Australia and online enrolments will open on Thursday 1st September 2016. Until 2017 location dates are confirmed you can use 2016 as a general guide. Be sure to check the <a href="/vacswim-locations/">locations page</a> for updates as they become confirmed.</p>
 				</div>
 				<div class="medium-5 columns">
 					<div class="green-buttons text-center medium-text-right">
 						<a class="green-button" href="#" data-reveal-id="join-newsletter-modal">
-							<img width="255" src="/img/template/newsletter-button-text.svg" alt="2015/16 Newsletter">
+							<img width="255" src="/img/template/newsletter-button-text-16-17.svg" alt="2016/17 Newsletter">
 						</a><br>
 						<a class="green-button" href="#" target="_blank">
 							<img width="255" src="/img/template/facebook-button-text.svg" alt="VACSWIM Facebook">
@@ -76,25 +59,7 @@ banner_link: /vacswim-locations/
 					</div>
 				</div>
 			</div>
-			{% comment %}
-			<div class="row outer-row">
-				<div class="medium-6 large-5 columns">
-					<div class="news-module">
-						<h2>Latest News</h2>
-							{% for item in news | limit: 3 %}
-							<article class="news-item">
-								<p><date>{{ item.date | date: "%d %B %Y" }}</date><br>
-								<a href="{{ item.url }}">{{ item.title | strip_html | truncate: 100 }}</a></p>
-							</article>
-							{% endfor %}
-							<p class="text-right"><a class="more-btn" href="/news/">More News &nbsp;<i class="icon-angle-right"></i></a></p>
-					</div> <!-- .news-module -->
-				</div> <!-- .columns -->
-				<div class="medium-6 large-5 large-offset-2 columns show-for-medium-up collapse-left">
-					{% include facebook_widget.html %}
-				</div> <!-- .columns -->
-			</div> <!-- .row -->
-			{% endcomment %}
+
 		</main>
 
 	</div> <!-- .hero -->

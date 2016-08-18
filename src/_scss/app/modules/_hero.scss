@@ -53,6 +53,7 @@
 
 .homepage .hero {
 	padding-top: $vertical-spacing;
+	// background: #adf42f;
 	background-image: url(../img/template/homepage-hero-summer.jpg);
 	background-repeat: no-repeat;
 	background-size: 1200px;
@@ -66,6 +67,7 @@
 	@media #{$medium-up} {
 		// background-position: 70% -50px;
 		background-position: 60% 0;
+		background-image: none; // slider will override it
 	}
 
 	@media #{$large-up} {
@@ -119,7 +121,7 @@
 	margin-bottom: rem-calc(30);
 
 	@media #{$medium-up} {
-	    font-size: rem-calc(30);
+	    font-size: rem-calc(23);
 	}
 }
 

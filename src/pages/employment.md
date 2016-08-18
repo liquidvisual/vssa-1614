@@ -1,28 +1,17 @@
 ---
 layout: internal/text_page_no_sidebar
-title: Employment
-permalink: /employment/
-hero_image: "instructors"
+title: On Site Enrolments
+permalink: /on-site-enrolments/
+hero_image: "kids-in-pool"
 ---
 
-## Kickstart Your Career by Participating in One of SA's Largest Community Events!
+<p>On line bookings have closed. &nbsp;However, you may still be
+able to register for VACSWIM at the location.</p>
 
-The annual VACSWIM program is a South Australian Government funded program managed by the YMCA of South Australia. Each year it engages up to 14,000 primary school aged children at more than 125 sites across the state. VACSWIM's aim is to reduce the incidence of drowning amongst the younger generations.
+<p>If you wish to enrol at a <strong>beach location</strong> please
+<a href="http://www.surflifesavingsa.com.au/the-academy/vacswim/" target="_blank">click here</a> to find out what beaches are
+offering on site enrolments and when. &nbsp;If you still have a
+query, please phone Surf Life Saving directly on 8354 6996.</p>
 
-2015 VACSWIM will be delivered by four different bodies of water safety experts. Royal Life Saving will deliver majority of the programs at pools. Surf Life Saving SA will deliver all programs at the beach or open water. YMCA of SA will deliver all programs at YMCA of SA pools. Various independent pool sites will deliver their own programs. Please see the [VACSWIM Locations Page](/vacswim-locations/) to discover what organisation will be running specific sites.
-
-All staff who worked in the 2014 program are encouraged to re-apply by contacting the program providers specific to their site.
-
-2015 VACSWIM providers will **start appointing eligible instructors in September 2014**, continuing this process until all positions/sites have been filled.
-
-### Employment for each provider can be found by clicking the links below:
-
-### Training for each provider can be found by clicking the links below:
-
-(If you are unsure about qualifications required, please contact the employer above that is associated with your chosen site)
-
-Should you have any further queries, please contact the VACSWIM head office on [(08) 8200 2525](tel:0882002525) or [vacswimsa@ymca.org.au](mailto:vacswimsa@ymca.org.au).
-
-All the best with your application.
-
-**SA Water VACSWIM; it's the holiday fun thing to do!**
+<p>If you wish to enrol at a <strong>pool</strong> please <a href="/news/2015/12/pools-on-site-enrolment-information/" title="Pools - on site enrolment information">click here</a> to
+find out further information on the location and when.&nbsp;</p>

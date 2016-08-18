@@ -1,0 +1,39 @@
+{% comment %}
+    LIQUIDVISUAL-HERO
+
+    - updated: 15.08.16
+    - notes:
+        * Multiple items in carousel_slides.yml triggers carousel mode
+        * .has-auto-height - caption will detemine height
+        * .has-fixed-height - used for internal pages to set a height
+{% endcomment %}
+
+{% assign hero_images = site.data.carousel_slides %}
+
+<div class="lv-hero-wrapper">
+
+	<!-- HERO -->
+	<div class="lv-hero">
+
+		{% for hero in hero_images %}
+	    	<div class="lv-hero-item" style="background-image: url('{{ hero.image | prepend: site.assets }}')"></div>
+		{% endfor %}
+
+	</div> <!-- /.lv-hero -->
+
+</div> <!-- /.hero-wrapper -->
+
+<!-- CAPTION -->
+<div class="lv-hero-caption-wrapper">
+    <div class="row outer-row">
+        <div class="medium-6 medium-offset-6 large-5 large-offset-7 columns medium-text-right collapse-left">
+            <div class="hero-caption animated fadeInLeft">
+
+				<h1>Waterproof <span class="bold-hero-text">Confidence</span></h1>
+				<h2>December 2016 &amp; January 2017</h2>
+				<p>SA Water VACSWIM is a government funded initiative for children aged 5 to 16 yrs to develop their skills and confidence in and around water.</p>
+
+            </div>
+        </div> <!-- .columns -->
+    </div> <!-- .row -->
+</div> <!-- .lv-hero-caption -->

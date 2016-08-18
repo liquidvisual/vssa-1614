@@ -8,10 +8,27 @@
 $(document).ready(function() {
 	NProgress.start(); // Start preloader bar
     $('input, textarea').placeholder(); // IE9 Patch
+
+    launchModal(5000);
 });
 
 window.onload = function(){
     NProgress.done();
+}
+
+//-----------------------------------------------------------------
+// Launch Modal if cookie enabled ('.show-modal' on body)
+//-----------------------------------------------------------------
+
+function launchModal(delay) {
+    var timer;
+    var $modal = $('#join-newsletter-modal');
+
+    if ($('.show-modal').length) {
+        timer = setTimeout(function(){
+            $modal.foundation('reveal', 'open');
+        }, delay);
+    }
 }
 
 //-----------------------------------------------------------------

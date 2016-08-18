@@ -12,20 +12,7 @@
         <img src="/img/content/logo@2x.png" alt="{{ settings.company_title }}" itemprop="logo"></a>
     </div>
     <div class="medium-6 columns text-right show-for-large-up">
-
-        {% if page.url == "/" %}
-            <ul class="social-networks">
-                <li class="facebook"><a href="{{ settings.facebook }}"><span><i class="icon-facebook"></i></span></a></li>
-                <li class="twitter"><a href="{{ settings.twitter }}"><span><i class="icon-twitter"></i></span></a></li>
-            </ul>
-        {% else %}
-            <h3 class="header-tagline">Waterproof <span class="header-tagline-bold-text">Confidence</span></h3>
-        {% endif %}
-
-        {% comment %}
-            <a class="affiliate-logo" href="/" title="{{ settings.affiliate_logo }}" target="_blank">
-            <img width="72" src="{{ settings.affiliate_logo | prepend: site.assets }}" alt="..."></a>
-        {% endcomment %}
+        <h3 class="header-tagline header-message"><i class="fa fa-exclamation-circle"></i>&nbsp;{{ settings.header_tagline }}</h3>
     </div>
 </div>
 

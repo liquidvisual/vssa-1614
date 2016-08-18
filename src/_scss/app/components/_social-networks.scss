@@ -28,7 +28,7 @@
 	text-align: center;
 	color: white !important;
 	font-size: rem-calc(20); //rem-calc(23);
-	line-height: 36px;
+	line-height: 33px;
 	display: inline-block;
 	background: $tertiary-color;
 	border-radius: 100%;
@@ -40,21 +40,37 @@
 	}
 }
 
-// .social-networks .facebook a {
-// 	background: #375493;
+.social-networks .facebook {
+	background: #375493;
 
-// 	&:hover {
-// 		background: darken(#375493, 10%);
-// 	}
-// }
+	&:hover {
+		background: darken(#375493, 10%);
+	}
+}
 
-// .social-networks .twitter a {
-// 	background: #56CBFE;
+.social-networks .instagram {
+	background: #b72f95;
 
-// 	&:hover {
-// 		// background: darken(#56CBFE, 10%);
-// 	}
-// }
+	&:hover {
+		background: darken(#b72f95, 10%);
+	}
+}
+
+.social-networks .twitter {
+	background: #56CBFE;
+
+	&:hover {
+		background: darken(#56CBFE, 10%);
+	}
+}
+
+.social-networks .google-plus {
+	background: #dd4b39;
+
+	&:hover {
+		background: darken(#dd4b39, 10%);
+	}
+}
 
 //-----------------------------------------------------------------
 // Context
