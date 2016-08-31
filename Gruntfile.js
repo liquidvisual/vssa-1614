@@ -71,7 +71,7 @@ module.exports = function (grunt) {
               scroll: true
           },
           // Don't send any file-change events to browsers
-          codeSync: true,
+          codeSync: false,
           // Open the site in Chrome & Firefox
           // browser: ["google chrome", "firefox"]
           port: 9292,

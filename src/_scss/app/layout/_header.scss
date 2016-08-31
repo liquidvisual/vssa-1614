@@ -126,18 +126,29 @@
 //-----------------------------------------------------------------
 
 .hamburger {
+	box-sizing: content-box;
 	position: absolute;
-	visibility: hidden;
-	bottom: -7px; /* magic num */
-	right: 0;
+	// visibility: hidden;
+	bottom: -13px; /* magic num */
+	right: -15px;
 	display: block;
 	width: rem-calc(28);
 	height: rem-calc(24);
 	margin: rem-calc(30);
 	z-index: 2;
 
+	background: white;
+	border: 8px solid white;
+	border-radius: 3px;
+	cursor: pointer;
+
 	@media #{$medium-up} {
-		bottom: rem-calc(4);
+		bottom: 3px;
+	}
+
+	&:active {
+		background: #eee;
+		border: 8px solid #eee;
 	}
 }
 
@@ -166,6 +177,11 @@
 html.mm-opening .hamburger:before,
 html.mm-opening .hamburger:after {
 	display: none;
+}
+
+.mm-opening .hamburger {
+	background: #eee;
+	border: 8px solid #eee;
 }
 
 //=========================================

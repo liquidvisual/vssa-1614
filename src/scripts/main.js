@@ -1,20 +1,25 @@
 /*
-	MAIN SCRIPTS - Last updated: 27-09-14
+	MAIN SCRIPTS - Last updated: 31-08-16
 */
 //-----------------------------------------------------------------
 // Document Ready
 //-----------------------------------------------------------------
 
-$(document).ready(function() {
+$(function() {
 	NProgress.start(); // Start preloader bar
     $('input, textarea').placeholder(); // IE9 Patch
-
     launchModal(5000);
+    initHamburgerMenu();
+    initAccordion();
 });
 
-window.onload = function(){
+//-----------------------------------------------------------------
+// On Load
+//-----------------------------------------------------------------
+
+$(window).on('load', function(){
     NProgress.done();
-}
+})
 
 //-----------------------------------------------------------------
 // Launch Modal if cookie enabled ('.show-modal' on body)
@@ -32,41 +37,44 @@ function launchModal(delay) {
 }
 
 //-----------------------------------------------------------------
-// Kickstart Foundation / Touch Conditionals
+// Make Accordion jump to the top of the heading on mobile
+// http://foundation.zurb.com/forum/posts/1316-accordion-jump-to-top-when-active
 //-----------------------------------------------------------------
 
-var isTouchDevice = $(".touch").length;
+function initAccordion() {
+    var isMobile = $(window).width() < 480;
+    var headerHeight = 80;
 
-if (isTouchDevice) {
-    // Make Accordion jump to the top of the heading on mobile
-    // http://foundation.zurb.com/forum/posts/1316-accordion-jump-to-top-when-active
-    $(document).foundation('accordion', {
-        callback: function (el){
-        var containerPos = $(el).parent().offset().top;
-        $('html, body').animate({ scrollTop: containerPos }, 300);
-        }
-    });
-    // Trigger hamburger by touch on mobile - this eliminates glitch with FastClick.js
-    $(".hamburger").css("visibility", "visible").bind("touchstart", function() { $("#off-canvas-menu").trigger("open.mm"); });
-
-} else {
-    // Trigger hamburger with a click on desktop
-    $(".hamburger").css("visibility", "visible").bind("click", function() { $("#off-canvas-menu").trigger("open.mm"); });
+    if (isMobile) {
+        $(document).foundation('accordion', {
+            callback: function (el){
+                var containerPos = $(el).parent().offset().top - headerHeight; // 80 is header height
+                $('html, body').animate({ scrollTop: containerPos }, 300);
+            }
+        });
+    }
 }
 
 //-----------------------------------------------------------------
 // 'MMenu' Settings
 //-----------------------------------------------------------------
 
-$("#off-canvas-menu").mmenu({
-   "offCanvas": {
-      "position": "right"
-   }
-});
+function initHamburgerMenu() {
+    var $offCanvasMenu = $("#off-canvas-menu");
 
-$('.hamburger').click(function(event){
-    event.preventDefault();
-})
+    // Properties
+    $offCanvasMenu.mmenu({
+        "offCanvas": {
+            "position": "right"
+        }
+    });
+
+    // Click Events
+    $(".hamburger").bind('click ontouchstart', function(event) {
+        event.preventDefault();
+        $("#off-canvas-menu").trigger("open.mm");
+    });
+}
 
 //-----------------------------------------------------------------
 // <= IE8 Caution Message
@@ -75,14 +83,8 @@ $('.hamburger').click(function(event){
 $('.lv-alert .close-btn').click(function(){$(this).parent().hide();});
 
 //-----------------------------------------------------------------
-// +++ HELPERS +++
-//-----------------------------------------------------------------
-
-// function trace(command){console.log(command+" ("+typeof(command)+")");}
-
-//==================================================
 // Developer: COMMAND+S for screen width
-//==================================================
+//-----------------------------------------------------------------
 
 $(document).keypress(function(event) {
     if (event.which == 115 && (event.ctrlKey||event.metaKey)|| (event.which == 19)) {
@@ -92,17 +94,6 @@ $(document).keypress(function(event) {
     }
     return true;
 });
-
-//==================================================
-// Submit Search Form by Hitting Enter
-//==================================================
-
-// $("#search-form").keypress(function(event) {
-//     if (event.which == 13) {
-//         event.preventDefault();
-//         $("#search-form").submit();
-//     }
-// });
 
 //==================================================
 //
