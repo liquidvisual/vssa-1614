@@ -1,9 +1,6 @@
 - title: Home
   url: /
 
-- title: VACSWIM Locations / Enrolments
-  url: /vacswim-locations/
-
 - title: Program Information
   url: /program-information/
   children:
@@ -21,14 +18,17 @@
     - title: Calendar Dates
       url: /program-information/calendar-dates/
 
-- title: FAQ
-  url: /faq/
+- title: VACSWIM Locations / Enrolments
+  url: /vacswim-locations/
 
-- title: On Site Enrolments
+- title: Onsite Enrolments
   url: /on-site-enrolments/
 
 - title: Employment
   url: /employment/
+
+- title: FAQ
+  url: /faq/
 
 - title: News
   url: /news/

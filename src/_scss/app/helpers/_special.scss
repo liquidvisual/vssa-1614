@@ -38,7 +38,11 @@ ul[class*='block-grid'] li img {
 //-----------------------------------------------------------------
 
 .notice {
-	color: $alert-color;
+	// color: $alert-color;
+	color: $quaternary-color; // 19/05/17
+	background: rgba($quaternary-color, 0.15);
+	padding: rem-calc(10 15);
+	// font-weight: 600;
 }
 
 .lv-super label {
