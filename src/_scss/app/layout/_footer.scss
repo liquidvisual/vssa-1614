@@ -53,8 +53,31 @@
 	//=========================================
 
 	.footer-bottom {
+		// position: relative;
 		background: $silk;
 		padding: rem-calc(15 0);
+
+		@media #{$large-up} {
+			z-index: 1;
+		}
+
+		//=========================================
+		// BLEED TO BOTTOM
+		//=========================================
+
+		&:after {
+			content: "";
+			position: fixed;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: inherit;
+			z-index: -1;
+		}
+
+		//=========================================
+		//
+		//=========================================
 
 		p {
 			margin-bottom: 0;
@@ -68,10 +91,6 @@
 				color: $body-font-color;
 			}
 		}
-	}
-
-	@media #{$large-up} {
-		z-index: 1;
 	}
 }
 
@@ -99,6 +118,10 @@
 .sponsors-group-2,
 .sponsors-group-3,
 .sponsors-group-4 {
+	.is-invisible {
+		visibility: hidden;
+	}
+
 	img {
 		vertical-align: top;
 		padding-bottom: rem-calc(10);
@@ -109,45 +132,61 @@
 	}
 }
 
-//=========================================
-// GROUP CONTROL
-//=========================================
+//-----------------------------------------------------------------
+// GROUP 1
+//-----------------------------------------------------------------
 
 .sponsors-group-1 {
 	padding: rem-calc(0 30);
 
 	@media #{$medium-up} {
 	    width: 35%;
-	} //=========================================
+	}
 	@media #{$xlarge-up} {
-		width: 35%;
+		width: 27%;
 	}
 }
+
+//-----------------------------------------------------------------
+// GROUP 2
+//-----------------------------------------------------------------
 
 .sponsors-group-2 {
 	padding: rem-calc(0 30);
 
+	img {
+		vertical-align: middle;
+	}
+
 	@media #{$medium-up} {
 	    width: 20%;
-	} //=========================================
-	@media #{$xlarge-up} {
-		width: 25%;
 	}
-}
-
-.sponsors-group-3 {
-	@media #{$medium-up} {
-	    width: 30%;
-	} //=========================================
 	@media #{$xlarge-up} {
 		width: 30%;
 	}
 }
 
+//-----------------------------------------------------------------
+// GROUP 3
+//-----------------------------------------------------------------
+
+.sponsors-group-3 {
+	@media #{$medium-up} {
+	    width: 30%;
+	}
+	@media #{$xlarge-up} {
+		width: 30%;
+	}
+}
+
+//-----------------------------------------------------------------
+// GROUP 4
+//-----------------------------------------------------------------
+
 .sponsors-group-4 {
 	@media #{$medium-up} {
 	    width: 15%;
-	} //=========================================
+	}
 	@media #{$xlarge-up} {
 		width: 10%;
 	}
@@ -174,6 +213,10 @@
 
 .footer-body-sponsors {
 
+	//================================================
+	// GROUP 1 IMAGE
+	//================================================
+
 	.sp-1 img {
 		width: rem-calc(260);
 
@@ -181,24 +224,39 @@
 		    width: 100%;
 		}
 	}
-	//========================
+	//================================================
+	// GROUP 2 IMAGES
+	//================================================
 
 	.sp-2 img {
-		width: rem-calc(80);
+		width: rem-calc(60);
+		margin: 0 10px 10px 0;
 
 		@media #{$medium-up} {
-		    width: rem-calc(60);
+		    width: rem-calc(44);
 		}
 	}
 	.sp-3 img {
-		width: rem-calc(80);
+		width: rem-calc(60);
+		margin: 0 10px 10px 0;
 
 		@media #{$medium-up} {
-		    width: rem-calc(60);
+		    width: rem-calc(50);
 		}
 	}
 
-	//========================
+	.sp-3a img {
+		width: rem-calc(60);
+		margin: 0 10px 10px 0;
+
+		@media #{$medium-up} {
+		    width: rem-calc(50);
+		}
+	}
+
+	//================================================
+	// GROUP 3 IMAGES
+	//================================================
 
 	.sp-4 img {
 		width: rem-calc(50);
@@ -221,7 +279,9 @@
 		    width: rem-calc(50);
 		}
 	}
-	//========================
+	//================================================
+	// GROUP 4 IMAGE
+	//================================================
 
 	.sp-7 img {
 		width: rem-calc(90);
